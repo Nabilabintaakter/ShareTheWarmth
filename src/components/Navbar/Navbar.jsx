@@ -1,20 +1,20 @@
 // import { useContext } from 'react';
-import {NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 // import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Navbar = () => {
-    const {pathname} = useLocation();
+    const { pathname } = useLocation();
     // const {user,handleSignOut} = useContext(AuthContext);
     const links = <>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-8 font-semibold ' : 'text-white mr-8 '} to='/'>HOME</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-8 font-semibold ' : 'text-white mr-8 '} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-8 font-semibold ' : 'text-white mr-8 '} to='/howToHelp'>HOW TO HELP</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/'>HOME</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/howToHelp'>HOW TO HELP</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  font-semibold ' : 'text-white '} to='/dashboard'>DASHBOARD</NavLink>
     </>
     return (
         <div className={` text-white fixed backdrop-blur-md z-50 w-full ${pathname === '/' ? 'bg-[#001f3f3d]' : 'bg-[#001f3f]'}`}>
-            <div className="navbar container mx-auto">
+            <div className="navbar w-full md:w-[95%] mx-auto p-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,17 +29,23 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <div className='flex gap-1 items-center'>
-                        <div><img className='w-10 h-10' src={logo} alt="" /></div>
-                        <a className="btn btn-ghost text-xl font-extrabold">Share the Warmth</a>
+                    <div className=' gap-2 items-center hidden md:flex'>
+                        <div><img className='w-8 h-8 xl:w-10 xl:h-10' src={logo} alt="" /></div>
+                        <a className="btn btn-ghost text-3xl font-semibold font-poiret p-0">Share the Warmth</a>
                     </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        {links}
-                    </ul>
+                <div className="navbar-center ">
+                    <div className='hidden lg:flex'>
+                        <ul className="menu menu-horizontal px-1">
+                            {links}
+                        </ul>
+                    </div>
+                    <div className=' gap-2 items-center flex md:hidden'>
+                        <div><img className='w-8 h-8 xl:w-10 xl:h-10' src={logo} alt="" /></div>
+                        <a className="btn btn-ghost text-3xl font-semibold font-poiret p-0">Share the Warmth</a>
+                    </div>
                 </div>
-                <div className="navbar-end mr-5">
+                <div className="navbar-end mr-3 md:mr-0">
                     <NavLink to='/login' className=" bg-white rounded-md border-none md:px-8 text-blue-950 font-semibold btn md:text-lg ">Login</NavLink>
                 </div>
             </div>

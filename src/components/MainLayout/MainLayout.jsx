@@ -6,7 +6,7 @@ const MainLayout = () => {
     const {pathname} = useLocation();
     console.log(pathname);
     return (
-        <div className='font-lato'>
+        <div className='font-nunito'>
             <div className={`${pathname === '/' ? 'h-0': 'h-16'}`}>
                 <Navbar></Navbar>
             </div>

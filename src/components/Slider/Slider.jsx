@@ -7,7 +7,7 @@ const Slider = () => {
     return (
         <div >
             <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full max-h-screen">
+                <div id="slide1" className="carousel-item relative w-full h-[400px]  xl:h-[700px]">
                     <div
                         className="hero"
                         style={{
