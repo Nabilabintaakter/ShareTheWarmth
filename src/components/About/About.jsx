@@ -3,7 +3,7 @@ import about2 from '../../assets/about-2.jpg'
 
 const About = () => {
     return (
-        <div className=' flex flex-col lg:flex-row gap-5 lg:gap-20 lg:mb-24 mb-[330px] max-h-[510px] max-w-7xl mx-auto'>
+        <div className=' flex flex-col lg:flex-row gap-5 lg:gap-20 lg:mb-24 md:mb-[410px] mb-[330px] max-h-[510px] max-w-7xl mx-auto'>
             <div className='relative w-full lg:w-1/2'>
                 <img className='w-full h-full object-cover' src={about1} alt="" />
                 <div className=''><img className='bg-white pt-1 md:pt-2 pl-1 md:pl-2 absolute w-[180px] md:w-[300px] bottom-0 right-0' src={about2} alt="" /></div>
