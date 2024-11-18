@@ -13,7 +13,7 @@ const Navbar = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  font-semibold ' : 'text-white '} to='/dashboard'>DASHBOARD</NavLink>
     </>
     return (
-        <div className={` text-white fixed backdrop-blur-md z-50 w-full ${pathname === '/' ? 'bg-[#001f3f3d]' : 'bg-[#001f3f]'}`}>
+        <div className={` text-white fixed backdrop-blur-md z-50 w-full ${pathname === '/' ? 'bg-[#001f3f9c]' : 'bg-[#001f3f]'}`}>
             <div className="navbar w-full md:w-[95%] mx-auto p-0">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -40,7 +40,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <div className=' gap-2 items-center flex md:hidden'>
+                    <div className=' gap-1 items-center flex md:hidden'>
                         <div><img className='w-8 h-8 xl:w-10 xl:h-10' src={logo} alt="" /></div>
                         <a className="btn btn-ghost text-3xl font-semibold font-poiret p-0">Share the Warmth</a>
                     </div>

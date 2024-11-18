@@ -7,7 +7,7 @@ import userEdit from '../../assets/user-avatar.png'
 const Blogs = () => {
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5 mb-12 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5 mb-[60px] lg:mb-24 max-w-7xl mx-auto">
                 <Link className="card card-compact bg-base-100 shadow-md group overflow-hidden">
                     <figure className='relative'>
                         <img

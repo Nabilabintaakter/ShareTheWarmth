@@ -4,10 +4,12 @@ import Blogs from '../Blogs/Blogs';
 import Header from '../Header/Header';
 import HowItWorks from '../HowItWorks/HowItWorks';
 import Slider from '../Slider/Slider';
+import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
     return (
         <div >
+            {/* banner starts */}
             <Slider></Slider>
             {/* about section starts*/}
             <section className='w-[75%] mx-auto'>
@@ -22,10 +24,17 @@ const Home = () => {
             </section>
             {/* Blogs section starts */}
             <section className='w-[75%] mx-auto'>
-            <div className='my-8 lg:my-14'>
+                <div className='my-8 lg:my-14'>
                     <Header title='Blogs' subTitle='Winter Donation Stories'></Header>
                 </div>
                 <Blogs></Blogs>
+            </section>
+            {/* testimonial section starts */}
+            <section className='w-[75%] mx-auto'>
+                <div className='my-8 lg:my-14'>
+                    <Header title='Testimonial' subTitle='What People Think About Us'></Header>
+                </div>
+                <Testimonial></Testimonial>
             </section>
         </div>
     );
