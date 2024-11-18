@@ -1,9 +1,10 @@
 // import { useContext } from 'react';
-import {NavLink } from 'react-router-dom';
+import {NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 // import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Navbar = () => {
+    const {pathname} = useLocation();
     // const {user,handleSignOut} = useContext(AuthContext);
     const links = <>
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-8 font-semibold ' : 'text-white mr-8 '} to='/'>HOME</NavLink>
@@ -12,7 +13,7 @@ const Navbar = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  font-semibold ' : 'text-white '} to='/dashboard'>DASHBOARD</NavLink>
     </>
     return (
-        <div className="bg-[#001F3F] text-white">
+        <div className={` text-white fixed backdrop-blur-md z-50 w-full ${pathname === '/' ? 'bg-[#001f3f3d]' : 'bg-[#001f3f]'}`}>
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

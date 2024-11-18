@@ -7,3 +7,10 @@
 .font-lato{
     font-family: "Lato", sans-serif;
   }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  *{
+    scrollbar-width: none;
+  }
