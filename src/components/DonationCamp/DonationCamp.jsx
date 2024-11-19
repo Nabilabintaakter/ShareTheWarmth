@@ -2,6 +2,9 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Card from '../Card/Card';
 import Header from '../Header/Header';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const DonationCamp = () => {
     const donations = useLoaderData();
@@ -14,6 +17,7 @@ const DonationCamp = () => {
                     donations.map((donation) => <Card key={donation.id} donation={donation}></Card>)
                 }
             </div>
+            <ToastContainer/>
         </div>
     );
 };
