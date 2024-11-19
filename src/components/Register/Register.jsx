@@ -7,6 +7,30 @@ import { useState } from 'react';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const [error, setError] = useState(null)
+    const handleSubmit = e =>{
+        setError('')
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const photo = e.target.photo.value;
+        const password = e.target.password.value;
+
+        if(password.length < 6){
+            setError('Password must be at least 6 characters long!')
+            return;
+        }
+        if (!/[a-z]/.test(password)) {
+            setError("Password must contain at least one lowercase letter!");
+            setUser(null);
+            return;
+        }
+        if (!/[A-Z]/.test(password)) {
+            setError("Password must contain at least one uppercase letter!");
+            setUser(null);
+            return;
+        }
+    }
     return (
         <div
             className="py-16 lg:py-24 relative flex flex-col items-center min-h-screen"
@@ -21,7 +45,7 @@ const Register = () => {
                 <h1 className="text-4xl lg:text-5xl font-extrabold mb-2">Create Your Account!</h1>
             </div>
             <div className="bg-white/30 backdrop-blur-lg shadow-2xl rounded-lg w-[90%] md:w-[60%] lg:w-[40%] px-6 py-8 max-w-xl">
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="form-control">
                         <label className="block text-lg font-semibold text-gray-800 mb-1">Name :</label>
                         <input
@@ -67,6 +91,7 @@ const Register = () => {
                                 <button type='button' onClick={() => setShowPassword(!showPassword)} className='absolute bg-white border-none right-4 top-[50px]'><IoMdEye className='text-lg' /></button>
                         }
                     </div>
+                    {error && <p className='text-red-500 font-medium text-lg'>{error}</p>}
                     <div className="form-control mt-4">
                         <button
                             type="submit"
