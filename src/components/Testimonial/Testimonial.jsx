@@ -7,7 +7,7 @@ import review6 from '../../assets/review-6.webp';
 
 const Testimonial = () => {
     return (
-        <div className='w-[95%] flex justify-center mx-auto'>
+        <div className='w-[95%] flex justify-center mx-auto mb-[60px] lg:mb-24'>
             <div className="carousel carousel-center  rounded-box max-w-[990px] mx-auto space-x-4 p-4">
                 {/* 1 */}
                 <div className="carousel-item">
@@ -33,7 +33,7 @@ const Testimonial = () => {
                 </div>
                 {/* 2 */}
                 <div className="carousel-item">
-                    <div className='bg-[#90B3D2] h-[400px] rounded-xl p-8 flex flex-col justify-between'>
+                    <div className='bg-[#FF5528] h-[400px] rounded-xl p-8 flex flex-col justify-between'>
                         <div className='flex items-center gap-3'>
                             <div><img className='w-12 h-12 rounded-full object-cover bg-white' src={review2} alt="" /></div>
                             <div>
@@ -77,7 +77,7 @@ const Testimonial = () => {
                 </div>
                 {/* 4 */}
                 <div className="carousel-item">
-                    <div className='bg-[#FF5528] h-[400px] rounded-xl p-8 flex flex-col justify-between'>
+                    <div className='bg-[#90B3D2] h-[400px] rounded-xl p-8 flex flex-col justify-between'>
                         <div className='flex items-center gap-3'>
                             <div><img className='w-12 h-12 rounded-full object-cover bg-white' src={review4} alt="" /></div>
                             <div>
@@ -99,7 +99,7 @@ const Testimonial = () => {
                 </div>
                 {/* 5 */}
                 <div className="carousel-item">
-                    <div className='bg-[#FFA415] h-[400px] rounded-xl p-8 flex flex-col justify-between'>
+                    <div className='bg-[#FF5528] h-[400px] rounded-xl p-8 flex flex-col justify-between'>
                         <div className='flex items-center gap-3'>
                             <div><img className='w-12 h-12 rounded-full object-cover' src={review5} alt="" /></div>
                             <div>
