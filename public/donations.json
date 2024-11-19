@@ -1,0 +1,192 @@
+[
+    {
+      "id": 1,
+      "title": "Warm Clothes Drive for Rajshahi",
+      "image": "https://i.ibb.co.com/42sfMbh/20f670d2-9ff6-47fb-ae4f-9ad615e3d65b.webp",
+      "description": "This campaign focuses on collecting warm clothes like sweaters, blankets, and jackets for underprivileged families in Rajshahi to protect them from the harsh winter cold.",
+      "status": "Ongoing",
+      "contactInfo": "01798654325",
+      "division": "Rajshahi"
+    },
+    {
+      "id": 2,
+      "title": "Support for Pabna's Rural Communities",
+      "image": "https://i.ibb.co.com/PjbGPLv/Shitbostro-bitoron-2014-16-960x661.jpg",
+      "description": "A winter clothing donation drive aimed at helping impoverished communities in rural Pabna stay warm during the winter season.",
+      "status": "Ongoing",
+      "contactInfo": "01845454543",
+      "division": "Rajshahi"
+    },
+    {
+      "id": 3,
+      "title": "Winter Relief in Sylhet Region",
+      "image": "https://i.ibb.co.com/xMTfxj3/Copy-of-IMG-20200111-154452.jpg",
+      "description": "This initiative distributes warm sweaters, socks, and shawls to the economically disadvantaged people in Sylhet's villages.",
+      "status": "Completed",
+      "contactInfo": "01712321232",
+      "division": "Sylhet"
+    },
+    {
+      "id": 4,
+      "title": "Providing Warm Clothes in Habiganj",
+      "image": "https://i.ibb.co.com/GTygXwJ/136530869-477132873272643-9187928546053692833-n-p5qzy9x18p4qw0crbo0kjvn96v4uu9ss3zo42qx0ks.jpg",
+      "description": "A campaign to deliver warm clothing to children and elderly residents of remote villages in Habiganj during the winter months.",
+      "status": "Ongoing",
+      "contactInfo": "01978987898",
+      "division": "Sylhet"
+    },
+    {
+      "id": 5,
+      "title": "Dhaka's Winter Help for Slum Dwellers",
+      "image": "https://i.ibb.co.com/nRkVjHT/asian-woman-putting-used-clothes-600nw-2387998517.webp",
+      "description": "Focused on distributing warm blankets and sweaters to slum residents in Dhaka who are struggling to combat the cold.",
+      "status": "Ongoing",
+      "contactInfo": "01745654565",
+      "division": "Dhaka"
+    },
+    {
+      "id": 6,
+      "title": "Support for Gazipur's Low-Income Families",
+      "image": "https://i.ibb.co.com/mDYL1sK/winter-blanket-appeal.jpg",
+      "description": "This project delivers jackets, socks, and shawls to Gazipur's low-income families to make their winter more bearable.",
+      "status": "Completed",
+      "contactInfo": "01634543234",
+      "division": "Dhaka"
+    },
+    {
+      "id": 7,
+      "title": "Blanket Distribution in Chattogram",
+      "image": "https://i.ibb.co.com/VDTs83D/Copy-of-IMG-20200111-153826-1.jpg",
+      "description": "Providing high-quality blankets to underprivileged families across Chattogram to shield them from the winter chill.",
+      "status": "Ongoing",
+      "contactInfo": "01934567867",
+      "division": "Chattogram"
+    },
+    {
+      "id": 8,
+      "title": "Helping Bandarban's Indigenous Families",
+      "image": "https://i.ibb.co.com/BLzb2PY/slide-1.jpg",
+      "description": "This drive focuses on helping indigenous communities in Bandarban by distributing warm clothes and essential winter gear.",
+      "status": "Ongoing",
+      "contactInfo": "01512345678",
+      "division": "Chattogram"
+    },
+    {
+      "id": 9,
+      "title": "Winter Essentials for Barisal's Needy",
+      "image": "https://i.ibb.co.com/HNNd1ZW/goonj-delhi-winter.webp",
+      "description": "This campaign is collecting and distributing winter items such as blankets, sweaters, and gloves to impoverished families in Barisal.",
+      "status": "Completed",
+      "contactInfo": "01434564564",
+      "division": "Barisal"
+    },
+    {
+      "id": 10,
+      "title": "Relief for Jhalokati's Villagers",
+      "image": "https://i.ibb.co.com/9N1QnPF/74397283-578649079555270-6414982472068497408-n.jpg",
+      "description": "A focused effort to provide warm clothing to the underprivileged in Jhalokati to help them endure the cold months.",
+      "status": "Ongoing",
+      "contactInfo": "013zzzzzzzz",
+      "division": "Barisal"
+    },
+    {
+      "id": 11,
+      "title": "Winter Warmth for Rangpur",
+      "image": "https://i.ibb.co.com/3MbJNRM/winter-clothes-e1687740931481-q8iaokfull2bumad0n6pzkhz8x7x01iibnkt8salk0.jpg",
+      "description": "An initiative aimed at providing blankets and warm sweaters to families in Rangpur suffering from severe winter conditions.",
+      "status": "Ongoing",
+      "contactInfo": "01246574657",
+      "division": "Rangpur"
+    },
+    {
+      "id": 12,
+      "title": "Helping Kurigram's Struggling Families",
+      "image": "https://i.ibb.co.com/PM1kDJ0/18-02-14-12-10-09-winter-distrubution-bangladesh1-copy-2.jpg",
+      "description": "This drive focuses on distributing winter clothes to low-income households in Kurigram to protect them from harsh winters.",
+      "status": "Ongoing",
+      "contactInfo": "01787565456",
+      "division": "Rangpur"
+    },
+    {
+      "id": 13,
+      "title": "Warm Clothes for Mymensingh's Poor",
+      "image": "https://i.ibb.co.com/ZSS7nvt/file-4117-2587a5be07eda4233f6c7e2cdd555a01.jpg",
+      "description": "A donation campaign to collect and deliver winter essentials to economically disadvantaged families in Mymensingh.",
+      "status": "Ongoing",
+      "contactInfo": "01845764587",
+      "division": "Mymensingh"
+    },
+    {
+      "id": 14,
+      "title": "Relief for Netrokona Villages",
+      "image": "https://i.ibb.co.com/HznhFM3/istockphoto-1362787530-612x612.jpg",
+      "description": "Supporting underprivileged villagers in Netrokona with warm jackets and blankets during the cold season.",
+      "status": "Ongoing",
+      "contactInfo": "01998568745",
+      "division": "Mymensingh"
+    },
+    {
+      "id": 15,
+      "title": "Winter Clothes for Jessore's Children",
+      "image": "https://i.ibb.co.com/18pCdTy/istockphoto-1293234449-612x612.jpg",
+      "description": "Providing winter clothing such as sweaters and hats to underprivileged children in Jessore to ensure their comfort during winter.",
+      "status": "Ongoing",
+      "contactInfo": "01734543456",
+      "division": "Khulna"
+    },
+    {
+      "id": 16,
+      "title": "Satkhira's Cold Relief Initiative",
+      "image": "https://i.ibb.co.com/0BtR0d5/b0fbe2ac-9eb6-446d-a592-e2dcf0cf0faf.jpg",
+      "description": "A campaign to distribute blankets, socks, and scarves to low-income families in Satkhira struggling with the cold.",
+      "status": "Completed",
+      "contactInfo": "01898706745",
+      "division": "Khulna"
+    },
+    {
+      "id": 17,
+      "title": "Aid for Khulna's Marginalized Families",
+      "image": "https://i.ibb.co.com/k1Hcwqq/volunteer-hands-holding-clothes-donation-box-filled-with-clothing-items-all-colors-407474-38277.jpg",
+      "description": "A focused effort to support marginalized families in Khulna with warm winter clothing, including jackets and shawls.",
+      "status": "Ongoing",
+      "contactInfo": "01734567456",
+      "division": "Khulna"
+    },
+    {
+      "id": 18,
+      "title": "Winter Warmth for Rangamati Residents",
+      "image": "https://i.ibb.co.com/hRpY1b7/2-1.jpg",
+      "description": "Providing essential winter clothing to the underprivileged residents of Rangamati, focusing on families in need.",
+      "status": "Ongoing",
+      "contactInfo": "01956789456",
+      "division": "Chattogram"
+    },
+    {
+      "id": 19,
+      "title": "Cold-Weather Assistance for Faridpur",
+      "image": "https://i.ibb.co.com/x8s9qnn/istockphoto-1077916628-1024x1024.jpg",
+      "description": "This initiative supports impoverished families in Faridpur with blankets and other winter essentials to combat the season’s harsh conditions.",
+      "status": "Ongoing",
+      "contactInfo": "01998765678",
+      "division": "Dhaka"
+    },
+    {
+      "id": 20,
+      "title": "Warmth for Bhola's Poor Communities",
+      "image": "https://i.ibb.co.com/P6R8m86/istockphoto-1438824405-1024x1024.jpg",
+      "description": "Distributing winter clothes and supplies to disadvantaged communities in Bhola to ensure they are protected during winter.",
+      "status": "Ongoing",
+      "contactInfo": "01787654321",
+      "division": "Barisal"
+    },
+    {
+      "id": 21,
+      "title": "Helping the Underprivileged in Naogaon",
+      "image": "https://i.ibb.co.com/cXFDNmw/istockphoto-1700284427-2048x2048.jpg",
+      "description": "This drive distributes warm clothing and blankets to low-income families in Naogaon, ensuring they stay warm this winter.",
+      "status": "Ongoing",
+      "contactInfo": "01864537564",
+      "division": "Rajshahi"
+    }
+  ]
+  

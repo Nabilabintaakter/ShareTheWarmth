@@ -46,7 +46,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end mr-3 md:mr-0">
-                    <NavLink to='/login' className=" bg-white rounded-md border-none md:px-8 text-blue-950 font-semibold btn md:text-lg ">Login</NavLink>
+                    <NavLink to='/login' className=" bg-white rounded-md border-none md:px-8 text-blue-950 font-semibold btn btn-sm md:btn-md md:text-lg ">Login</NavLink>
                 </div>
             </div>
         </div>

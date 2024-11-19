@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import slide1 from '../../assets/slide-1.jpg'
 import slide2 from '../../assets/slide-2.png'
 import slide3 from '../../assets/slide-3.jpg'
@@ -20,7 +21,7 @@ const Slider = () => {
                                 <p className="mb-5 text-sm md:text-base">
                                 Join us in bringing hope this winter. Your donation of warm clothes can make a life-changing difference for those in need across Bangladesh.
                                 </p>
-                                <button className="btn btn-md bg-[#FEA501] rounded-md text-white hover:text-black hover:bg-white font-bold border-none transition-all duration-700">DONATE NOW</button>
+                                <Link to='/donationCampaign' className="btn btn-md bg-[#FEA501] rounded-md text-white hover:text-black hover:bg-white font-bold border-none transition-all duration-700">DONATE NOW</Link>
                             </div>
                         </div>
                     </div>

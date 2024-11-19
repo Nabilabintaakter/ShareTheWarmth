@@ -8,6 +8,7 @@ import HowToHelp from "../components/HowToHelp/HowToHelp";
 import Dashboard from "../components/Dashboard/Dashboard";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import CardDetails from "../components/CardDetails/CardDetails";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/donationCampaign',
-                element: <DonationCamp></DonationCamp>
+                element: <DonationCamp></DonationCamp>,
+                loader: ()=> fetch('/donations.json'),
+            },
+            {
+                path: '/donationCampaign/:id',
+                element: <CardDetails></CardDetails>,
             },
             {
                 path: '/howToHelp',
