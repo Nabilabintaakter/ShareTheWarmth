@@ -9,6 +9,7 @@ import Dashboard from "../components/Dashboard/Dashboard";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import CardDetails from "../components/CardDetails/CardDetails";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,10 @@ const router = createBrowserRouter([
                     const res = await fetch('/donations.json')
                     const data = await res.json()
                     const singleData = data.find(d=> d.id == params.id)
-                    return singleData;
+                    if (data){
+                        return singleData;
+                    }
+                    return null;
                   }
             },
             {
@@ -52,6 +56,10 @@ const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
+    }
 ]);
 
 export default router;
