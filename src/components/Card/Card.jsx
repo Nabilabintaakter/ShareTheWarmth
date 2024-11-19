@@ -7,7 +7,7 @@ const Card = ({ donation }) => {
         <div className="card card-compact bg-white shadow-lg">
             <figure className='relative'>
                 <img
-                    className='w-full h-[280px] lg:h-[320px] xl:h-[360px]  object-cover rounded-xl'
+                    className='w-full h-[280px] xl:h-[360px]  object-cover rounded-xl'
                     src={image}
                     alt="Shoes" />
                 <p className='absolute top-5 left-5 badge badge-lg bg-[#FEA501] border-none text-white'>{division}</p>

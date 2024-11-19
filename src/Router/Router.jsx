@@ -27,6 +27,12 @@ const router = createBrowserRouter([
             {
                 path: '/donationCampaign/:id',
                 element: <CardDetails></CardDetails>,
+                loader: async({params})=>{
+                    const res = await fetch('/donations.json')
+                    const data = await res.json()
+                    const singleData = data.find(d=> d.id == params.id)
+                    return singleData;
+                  }
             },
             {
                 path: '/howToHelp',
