@@ -3,16 +3,16 @@ import { FcGoogle } from "react-icons/fc";
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
-import { useContext, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const { handleLogin, setUser, handleGoogleSignIn } = useContext(AuthContext);
+    const { handleLogin, setUser, handleGoogleSignIn,setLoading ,myEmail,setMyEmail} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location);
+    const emailRef = useRef();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -22,16 +22,17 @@ const Login = () => {
 
         handleLogin(email, password)
             .then(res => {
-                console.log(res.user);
+                setLoading(false);
                 setUser(res.user);
                 toast.success('Successfully logged in!', {
                     position: 'top-center'
                 })
                 setTimeout(() => {
-                    navigate(location.state.from)
+                    navigate(location.state? location.state.from : '/')
                 }, 2000)
             })
             .catch(err => {
+                setLoading(false);
                 toast.error(`${err.message.slice(10)}`, {
                     position: "top-center"
                 });
@@ -41,13 +42,12 @@ const Login = () => {
     const googleLoginHandler = () => {
         handleGoogleSignIn()
             .then(res => {
-                setUser(res.user)
-                console.log(res.user); 
+                setUser(res.user) 
                 toast.success("Successfully logged in!", {
                     position: "top-center"
                 });
                 setTimeout(() => {
-                    navigate(location.state.from)
+                    navigate(location.state ? location.state.from : '/')
                 }, 2000)
 
             })
@@ -57,6 +57,11 @@ const Login = () => {
                 });
                 setUser(null)
             })
+    }
+    const handleForgetPass = ()=>{
+        console.log(emailRef.current.value);
+        const email = emailRef.current.value;
+        setMyEmail(email)
     }
 
     return (
@@ -80,6 +85,7 @@ const Login = () => {
                         <input
                             type="email"
                             name="email"
+                            ref={emailRef}
                             placeholder="Enter your email"
                             className="input input-bordered w-full py-3 px-4 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                             required
@@ -102,7 +108,8 @@ const Login = () => {
                     </div>
                     <div className="text-right">
                         <NavLink
-                            to="#"
+                            onClick={handleForgetPass}
+                            to="/forgetPass"
                             className="text-sm text-blue-600 hover:underline">
                             Forgot password?
                         </NavLink>

@@ -11,6 +11,7 @@ import Register from "../components/Register/Register";
 import CardDetails from "../components/CardDetails/CardDetails";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import ForgetPass from "../components/ForgetPass/ForgetPass";
 
 const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/forgetPass',
+                element: <ForgetPass></ForgetPass>
             },
         ]
     },

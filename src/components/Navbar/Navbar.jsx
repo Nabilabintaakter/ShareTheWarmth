@@ -7,7 +7,6 @@ import userPro from '../../assets/userPro.webp'
 const Navbar = () => {
     const { pathname } = useLocation();
     const { user, handleSignOut } = useContext(AuthContext);
-    console.log(user);
     const links = <>
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/'>HOME</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>

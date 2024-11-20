@@ -1,0 +1,71 @@
+import { useContext } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import bg from '../../assets/how-bg-3.jpg';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
+const ForgetPass = () => {
+    const { handleResetPassword ,myEmail,setMyEmail} = useContext(AuthContext);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleResetPassword(myEmail) 
+            .then(() => {
+                toast.success("Password reset email sent, please check your email.", {
+                    position: "top-center"
+                });
+                setTimeout(()=>{
+                    window.open("https://mail.google.com/", "_blank");
+                },2500)
+            })
+            .catch(() => {
+                toast.error("Failed to send reset email. Please try again.", {
+                    position: "top-center"
+                });
+            })
+
+    };
+
+    return (
+        <div
+            className="py-16 lg:py-24 relative flex flex-col items-center min-h-screen"
+            style={{
+                backgroundImage: `url(${bg})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+            }}
+        >
+            <div className="text-center mb-8">
+                <p className="text-2xl lg:text-3xl font-semibold text-gray-700">Please reset your password</p>
+            </div>
+            <div className="bg-white/30 backdrop-blur-lg shadow-2xl rounded-lg w-[90%] md:w-[60%] lg:w-[40%] px-6 py-8 max-w-xl">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="form-control">
+                        <label className="block text-lg font-semibold text-gray-800 mb-1">Email :</label>
+                        <input
+                            onChange={(e) => setMyEmail(e.target.value)} 
+                            type="email"
+                            name="email"
+                            value={myEmail} 
+                            placeholder="Enter your email"
+                            className="input input-bordered w-full py-3 px-4 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <div className="form-control">
+                        <button
+                            type="submit"
+                            className="flex items-center justify-center gap-3 bg-green-500 text-white py-3 rounded-md text-lg font-medium border-[1px] border-green-500 hover:bg-white hover:border hover:border-green-500 hover:text-green-500 hover:font-bold transition-all duration-300"
+                        >
+                            Reset Password
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <ToastContainer autoClose={2000} />
+        </div>
+    );
+};
+
+export default ForgetPass;

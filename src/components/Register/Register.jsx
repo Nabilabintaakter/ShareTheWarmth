@@ -23,54 +23,51 @@ const Register = () => {
         const password = e.target.password.value;
 
         if (password.length < 6) {
-            setError('Password must be at least 6 characters long!')
+            setError("Password must be at least 6 characters long!");
             return;
         }
         if (!/[a-z]/.test(password)) {
             setError("Password must contain at least one lowercase letter!");
-            setUser(null);
             return;
         }
         if (!/[A-Z]/.test(password)) {
             setError("Password must contain at least one uppercase letter!");
-            setUser(null);
             return;
         }
+        
         // sign up
         handleSignUp(email, password)
-            .then(res => {
-                setUser(res.user)
-                console.log(res.user);
-                // update profile
-                handleUpdateProfile(name, photo)
-                    .then(res => {
-                        console.log(res);
-                    })
-                    .catch(err => {
-                        toast.error(`${err.message.slice(10)}`, {
-                            position: "top-center"
-                        });
-                    })
-                toast.success("Successfully Registered!", {
-                    position: "top-center"
+        .then(res => {
+            setUser(res.user);
+            // update profile
+            handleUpdateProfile(name, photo)
+                .then(() => {
+                    toast.success("Successfully Registered!", {
+                        position: "top-center",
+                    });
+                    setTimeout(() => {
+                        navigate('/');
+                    }, 2000);
+                })
+                .catch(err => {
+                    toast.error(`${err.message.slice(10)}`, {
+                        position: "top-center",
+                    });
                 });
-                setTimeout(() => {
-                    navigate('/')
-                }, 2000)
-            })
-            .catch(err => {
-                toast.error(`${err.message.slice(10)}`, {
-                    position: "top-center"
-                });
-                setUser(null)
-            })
+        })
+        .catch(err => {
+            toast.error(`${err.message.slice(10)}`, {
+                position: "top-center",
+            });
+            setUser(null);
+        });
+    
     }
     const googleLoginHandler = () => {
         // google login
         handleGoogleSignIn()
             .then(res => {
                 setUser(res.user)
-                console.log(res.user);
                 toast.success("Successfully logged in!", {
                     position: "top-center"
                 });

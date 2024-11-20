@@ -4,9 +4,10 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useContext } from 'react';
 
 const PrivateRoute = ({ children }) => {
-    const { user, loading } = useContext(AuthContext);
+    const { user, loading,setLoading } = useContext(AuthContext);
     const location = useLocation();
     if (loading) {
+        setLoading(true)
         return (
             <div className='min-h-screen flex justify-center items-center'>
                 <ThreeDots
@@ -25,7 +26,9 @@ const PrivateRoute = ({ children }) => {
     if (!user) {
         return <Navigate state={{from: location.pathname}} to='/login'></Navigate>
     }
-    return children;
+    else {
+        return children;
+    }
 };
 
 export default PrivateRoute;
