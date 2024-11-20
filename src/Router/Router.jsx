@@ -10,6 +10,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import CardDetails from "../components/CardDetails/CardDetails";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/donationCampaign/:id',
-                element: <CardDetails></CardDetails>,
+                element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
                 loader: async({params})=>{
                     const res = await fetch('/donations.json')
                     const data = await res.json()
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
             },
             {
                 path: '/login',

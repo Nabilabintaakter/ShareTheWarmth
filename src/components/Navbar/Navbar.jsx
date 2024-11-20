@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { BiLogOut } from "react-icons/bi";
-
+import userPro from '../../assets/userPro.webp'
 const Navbar = () => {
     const { pathname } = useLocation();
     const { user, handleSignOut } = useContext(AuthContext);
@@ -56,7 +56,7 @@ const Navbar = () => {
                                         <img
                                             className='object-cover'
                                             alt="Tailwind CSS Navbar component"
-                                            src={user?.photoURL} />
+                                            src={user?.photoURL || userPro} />
                                     </div>
                                 </div>
                                 <ul
