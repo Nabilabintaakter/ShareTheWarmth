@@ -1,13 +1,18 @@
 import bg from '../../assets/how-bg-3.jpg';
 import { FcGoogle } from "react-icons/fc";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import { toast ,ToastContainer} from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+    const {handleSignUp,setUser,handleUpdateProfile} = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null)
+    const navigate = useNavigate();
     const handleSubmit = e =>{
         setError('')
         e.preventDefault();
@@ -30,6 +35,33 @@ const Register = () => {
             setUser(null);
             return;
         }
+        handleSignUp(email, password)
+        .then(res=>{
+            setUser(res.user)
+            console.log(res.user);
+                // update profile
+                handleUpdateProfile(name,photo)
+                .then(res=>{
+                    console.log(res);
+                })
+                .catch(err=>{
+                    toast.error(`${err.message.slice(10)}`, {
+                        position: "top-center"
+                    });
+                })
+            toast.success("Successfully Registered!", {
+                position: "top-center"
+            });
+            setTimeout(()=>{
+                navigate('/')
+            },2000)
+        })
+        .catch(err => {
+            toast.error(`${err.message.slice(10)}`, {
+                position: "top-center"
+            });
+            setUser(null)
+        })
     }
     return (
         <div
@@ -121,6 +153,7 @@ const Register = () => {
                     </NavLink>
                 </p>
             </div>
+            <ToastContainer autoClose={2000} />
         </div>
     );
 };

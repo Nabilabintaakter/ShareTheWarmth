@@ -1,11 +1,13 @@
-// import { useContext } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.png'
-// import { AuthContext } from '../AuthProvider/AuthProvider';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import { BiLogOut } from "react-icons/bi";
 
 const Navbar = () => {
     const { pathname } = useLocation();
-    // const {user,handleSignOut} = useContext(AuthContext);
+    const { user, handleSignOut } = useContext(AuthContext);
+    console.log(user);
     const links = <>
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/'>HOME</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>
@@ -46,7 +48,60 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end mr-3 md:mr-0">
-                    <NavLink to='/login' className=" bg-white rounded-md border-none md:px-8 text-blue-950 font-semibold btn btn-sm md:btn-md md:text-lg ">Login</NavLink>
+                    {
+                        user ?
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-12 rounded-full">
+                                        <img
+                                            className='object-cover'
+                                            alt="Tailwind CSS Navbar component"
+                                            src={user?.photoURL} />
+                                    </div>
+                                </div>
+                                <ul
+                                    tabIndex={0}
+                                    className="menu menu-sm dropdown-content bg-[#D7F1F0] rounded-box z-[1] mt-3 w-52 p-4 shadow-lg text-black"
+                                >
+                                    <div className="flex flex-col items-center gap-4 mb-4">
+                                        {/* Profile Picture */}
+                                        <div>
+                                            <img
+                                                className="w-16 h-16 rounded-full object-cover border-2 border-blue-600 shadow-sm"
+                                                src={user?.photoURL}
+                                                alt="User Profile"
+                                            />
+                                        </div>
+
+                                        {/* Display Name */}
+                                        <h1 className="text-blue-950 text-lg font-bold capitalize tracking-wide">
+                                            {user?.displayName}
+                                        </h1>
+
+                                        {/* View Profile Button */}
+                                        <Link to='/dashboard'>
+                                            <button
+                                                className="btn btn-sm lg:btn-md bg-gradient-to-r from-blue-950 to-blue-600 text-white font-medium hover:font-bold transition-all duration-300 rounded-lg shadow-md border-none w-full"
+                                            >
+                                                View Profile
+                                            </button>
+                                        </Link>
+
+                                        {/* Log Out Button */}
+                                        <Link to='/'>
+                                            <button onClick={handleSignOut}
+                                                className="btn btn-sm lg:btn-md bg-red-600 text-white font-medium hover:bg-transparent hover:text-red-600 hover:border-red-600 hover:font-bold transition-all duration-300 rounded-lg border-red-600 shadow-md flex items-center justify-center gap-2 w-full"
+                                            >
+                                                <BiLogOut className="text-xl" />
+                                                Log Out
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </ul>
+
+                            </div> :
+                            <NavLink to='/login' className=" bg-white rounded-md border-none md:px-8 text-blue-950 font-semibold btn btn-sm md:btn-md md:text-lg ">Login</NavLink>
+                    }
                 </div>
             </div>
         </div>
