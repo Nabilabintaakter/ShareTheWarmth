@@ -1,37 +1,64 @@
 import bg from '../../assets/how-bg-3.jpg';
 import { FcGoogle } from "react-icons/fc";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import { useContext, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
-import { toast,ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const {handleLogin,user,setUser}= useContext(AuthContext);
+    const { handleLogin, setUser, handleGoogleSignIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location);
 
-    const handleSubmit = e=>{
+    const handleSubmit = e => {
         e.preventDefault();
 
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        handleLogin(email,password)
-        .then(res=>{
-            console.log(res.user);
-            setUser(res.user);
-            toast.success('Successfully logged in!',{
-                position: 'top-center'
+        handleLogin(email, password)
+            .then(res => {
+                console.log(res.user);
+                setUser(res.user);
+                toast.success('Successfully logged in!', {
+                    position: 'top-center'
+                })
+                setTimeout(() => {
+                    navigate(location.state.from)
+                }, 2000)
             })
-        })
-        .catch(err=>{
-            toast.error(`${err.message.slice(10)}`, {
-                position: "top-center"
-            });
-            setUser(null)
-        })
+            .catch(err => {
+                toast.error(`${err.message.slice(10)}`, {
+                    position: "top-center"
+                });
+                setUser(null)
+            })
     }
+    const googleLoginHandler = () => {
+        handleGoogleSignIn()
+            .then(res => {
+                setUser(res.user)
+                console.log(res.user); 
+                toast.success("Successfully logged in!", {
+                    position: "top-center"
+                });
+                setTimeout(() => {
+                    navigate(location.state.from)
+                }, 2000)
+
+            })
+            .catch(err => {
+                toast.error(`${err.message.slice(10)}`, {
+                    position: "top-center"
+                });
+                setUser(null)
+            })
+    }
+
     return (
         <div
             className="py-16 lg:py-24 relative flex flex-col items-center min-h-screen"
@@ -91,13 +118,13 @@ const Login = () => {
                 </form>
                 <div className="my-6 border-t border-gray-300"></div>
                 <div className="form-control">
-                    <NavLink
-                        to="#"
+                    <button
+                        onClick={googleLoginHandler}
                         className="flex items-center justify-center gap-3 bg-red-500 text-white py-3 rounded-md text-lg font-medium border-[1px] border-red-500 hover:bg-white hover:border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-300"
                     >
                         <FcGoogle className="text-2xl" />
                         Login with Google
-                    </NavLink>
+                    </button>
                 </div>
                 <p className="text-center mt-6 text-gray-700">
                     Don't have an account?

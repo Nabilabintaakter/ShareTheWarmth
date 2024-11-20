@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const DonationCamp = () => {
     const donations = useLoaderData();
-    console.log(donations);
     return (
         <div className='w-full bg-[#D7F1F2]'>
             <div className='py-6'><Header title='Join Our Mission' subTitle='Donation Campaigns'></Header></div>

@@ -5,15 +5,16 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import { useContext, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
-import { toast ,ToastContainer} from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-    const {handleSignUp,setUser,handleUpdateProfile} = useContext(AuthContext);
+    const { handleSignUp, setUser, handleUpdateProfile, handleGoogleSignIn } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null)
     const navigate = useNavigate();
-    const handleSubmit = e =>{
+
+    const handleSubmit = e => {
         setError('')
         e.preventDefault();
         const name = e.target.name.value;
@@ -21,7 +22,7 @@ const Register = () => {
         const photo = e.target.photo.value;
         const password = e.target.password.value;
 
-        if(password.length < 6){
+        if (password.length < 6) {
             setError('Password must be at least 6 characters long!')
             return;
         }
@@ -35,33 +36,54 @@ const Register = () => {
             setUser(null);
             return;
         }
+        // sign up
         handleSignUp(email, password)
-        .then(res=>{
-            setUser(res.user)
-            console.log(res.user);
+            .then(res => {
+                setUser(res.user)
+                console.log(res.user);
                 // update profile
-                handleUpdateProfile(name,photo)
-                .then(res=>{
-                    console.log(res);
-                })
-                .catch(err=>{
-                    toast.error(`${err.message.slice(10)}`, {
-                        position: "top-center"
-                    });
-                })
-            toast.success("Successfully Registered!", {
-                position: "top-center"
-            });
-            setTimeout(()=>{
-                navigate('/')
-            },2000)
-        })
-        .catch(err => {
-            toast.error(`${err.message.slice(10)}`, {
-                position: "top-center"
-            });
-            setUser(null)
-        })
+                handleUpdateProfile(name, photo)
+                    .then(res => {
+                        console.log(res);
+                    })
+                    .catch(err => {
+                        toast.error(`${err.message.slice(10)}`, {
+                            position: "top-center"
+                        });
+                    })
+                toast.success("Successfully Registered!", {
+                    position: "top-center"
+                });
+                setTimeout(() => {
+                    navigate('/')
+                }, 2000)
+            })
+            .catch(err => {
+                toast.error(`${err.message.slice(10)}`, {
+                    position: "top-center"
+                });
+                setUser(null)
+            })
+    }
+    const googleLoginHandler = () => {
+        // google login
+        handleGoogleSignIn()
+            .then(res => {
+                setUser(res.user)
+                console.log(res.user);
+                toast.success("Successfully logged in!", {
+                    position: "top-center"
+                });
+                setTimeout(() => {
+                    navigate('/')
+                }, 2000)
+            })
+            .catch(err => {
+                toast.error(`${err.message.slice(10)}`, {
+                    position: "top-center"
+                });
+                setUser(null)
+            })
     }
     return (
         <div
@@ -135,13 +157,13 @@ const Register = () => {
                 </form>
                 <div className="my-6 border-t border-gray-300"></div>
                 <div className="form-control">
-                    <NavLink
-                        to="#"
+                    <button
+                        onClick={googleLoginHandler}
                         className="flex items-center justify-center gap-3 bg-red-500 text-white py-3 rounded-md text-lg font-medium border-[1px] border-red-500 hover:bg-white hover:border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-300"
                     >
                         <FcGoogle className="text-2xl" />
                         Login with Google
-                    </NavLink>
+                    </button>
                 </div>
                 <p className="text-center mt-6 text-gray-700">
                     Already have an account?

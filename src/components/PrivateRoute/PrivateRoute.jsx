@@ -1,10 +1,11 @@
 import {ThreeDots } from 'react-loader-spinner';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useContext } from 'react';
 
 const PrivateRoute = ({ children }) => {
-    const { user, loading,setLoading } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
+    const location = useLocation();
     if (loading) {
         return (
             <div className='min-h-screen flex justify-center items-center'>
@@ -22,7 +23,7 @@ const PrivateRoute = ({ children }) => {
         )
     }
     if (!user) {
-        return <Navigate to='/login'></Navigate>
+        return <Navigate state={{from: location.pathname}} to='/login'></Navigate>
     }
     return children;
 };
