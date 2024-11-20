@@ -6,15 +6,22 @@ import bg from '../../assets/how-bg-3.jpg';
 import { ThreeDots } from 'react-loader-spinner';
 
 const Dashboard = () => {
-    const { user, loading } = useContext(AuthContext);  // added loading state
-    console.log('user is ', user);
+    const { user, loading } = useContext(AuthContext); 
+    console.log(user);
 
-    if (user === null) {
-        return <div>Loading spinner...</div>; // Or a fallback UI
+    if (loading) {
+        return (
+            <div className="min-h-screen flex justify-center items-center">
+                <ThreeDots
+                    visible={true}
+                    height="80"
+                    width="80"
+                    color="#193070"
+                    ariaLabel="three-dots-loading"
+                />
+            </div>
+        );
     }
-    if (!user?.displayName) {
-        return <div>No user found. Please log in.</div>;
-    }    
 
     if (!user) {
         return <Navigate to="/login" />;
@@ -26,9 +33,9 @@ const Dashboard = () => {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-        }} className="py-16 lg:py-24 flex justify-center items-center">
-            <div className="flex flex-col items-center space-y-12">
-                <h1 className="text-3xl font-medium text-blue-950 font-playfair">
+        }} className="pt-5 pb-12 lg:pt-10 lg:pb-16 flex justify-center items-center">
+            <div className="flex flex-col items-center space-y-8">
+                <h1 className="text-center text-3xl font-medium text-blue-950 font-playfair">
                     Welcome, {user?.displayName}!
                 </h1>
                 <div className="card card-compact bg-white rounded-md w-[90%] md:w-[80%] shadow-md relative">

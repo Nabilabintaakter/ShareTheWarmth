@@ -9,7 +9,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-    const { handleSignUp, setUser, handleUpdateProfile, handleGoogleSignIn } = useContext(AuthContext);
+    const { handleSignUp, setUser, handleUpdateProfile, handleGoogleSignIn, setLoading } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null)
     const navigate = useNavigate();
@@ -34,40 +34,43 @@ const Register = () => {
             setError("Password must contain at least one uppercase letter!");
             return;
         }
-        
+
         // sign up
         handleSignUp(email, password)
-        .then(res => {
-            setUser(res.user);
-            // update profile
-            handleUpdateProfile(name, photo)
-                .then(() => {
-                    toast.success("Successfully Registered!", {
-                        position: "top-center",
+            .then(res => {
+                setUser(res.user);
+                setLoading(false);
+                // update profile
+                handleUpdateProfile(name, photo)
+                    .then((res) => {
+                        setLoading(false);
+                        toast.success("Successfully Registered!", {
+                            position: "top-center",
+                        });
+                        setTimeout(() => {
+                            navigate('/');
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        toast.error(`${err.message.slice(10)}`, {
+                            position: "top-center",
+                        });
                     });
-                    setTimeout(() => {
-                        navigate('/');
-                    }, 2000);
-                })
-                .catch(err => {
-                    toast.error(`${err.message.slice(10)}`, {
-                        position: "top-center",
-                    });
+            })
+            .catch(err => {
+                toast.error(`${err.message.slice(10)}`, {
+                    position: "top-center",
                 });
-        })
-        .catch(err => {
-            toast.error(`${err.message.slice(10)}`, {
-                position: "top-center",
+                setUser(null);
             });
-            setUser(null);
-        });
-    
+
     }
     const googleLoginHandler = () => {
         // google login
         handleGoogleSignIn()
             .then(res => {
-                setUser(res.user)
+                setUser(res.user);
+                setLoading(false);
                 toast.success("Successfully logged in!", {
                     position: "top-center"
                 });

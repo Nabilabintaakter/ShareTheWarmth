@@ -8,10 +8,10 @@ const Navbar = () => {
     const { pathname } = useLocation();
     const { user, handleSignOut } = useContext(AuthContext);
     const links = <>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/'>HOME</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 '} to='/howToHelp'>HOW TO HELP</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  font-semibold ' : 'text-white '} to='/dashboard'>DASHBOARD</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/'>HOME</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/howToHelp'>HOW TO HELP</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  font-semibold hover:text-[#FEA501]' : 'text-white hover:text-[#FEA501]'} to='/dashboard'>DASHBOARD</NavLink>
     </>
     return (
         <div className={` text-white fixed backdrop-blur-md z-50 w-full ${pathname === '/' ? 'bg-[#001f3f9c]' : 'bg-[#001f3f]'}`}>
@@ -26,7 +26,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="bg-blue-950 pl-3 menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="bg-blue-950  menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 shadow space-y-2 py-4 pl-6">
                             {links}
                         </ul>
                     </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
                                 </div>
                                 <ul
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content bg-[#D7F1F0] rounded-box z-[1] mt-3 w-52 p-4 shadow-lg text-black"
+                                    className="menu menu-sm dropdown-content bg-[#D7F1F0] rounded-box z-[1] mt-3 w-60 p-4 shadow-lg text-black"
                                 >
                                     <div className="flex flex-col items-center gap-4 mb-4">
                                         <div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                                                 alt="User Profile"
                                             />
                                         </div>
-                                        <h1 className="text-blue-950 text-lg font-bold capitalize tracking-wide">
+                                        <h1 className="text-blue-950 text-lg font-bold capitalize tracking-wide text-center">
                                             {user?.displayName}
                                         </h1>
                                         <Link to='/dashboard'>

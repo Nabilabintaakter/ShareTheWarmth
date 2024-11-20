@@ -12,6 +12,7 @@ import CardDetails from "../components/CardDetails/CardDetails";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import ForgetPass from "../components/ForgetPass/ForgetPass";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
             {
                 path: '/forgetPass',
                 element: <ForgetPass></ForgetPass>
+            },
+            {
+                path: '/updateProfile',
+                element: <UpdateProfile></UpdateProfile>
             },
         ]
     },
