@@ -3,10 +3,35 @@ import { FcGoogle } from "react-icons/fc";
 import { NavLink } from 'react-router-dom';
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
-import { useState } from 'react';
-
+import { useContext, useState } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import { toast,ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const {handleLogin,user,setUser}= useContext(AuthContext);
+
+    const handleSubmit = e=>{
+        e.preventDefault();
+
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        handleLogin(email,password)
+        .then(res=>{
+            console.log(res.user);
+            setUser(res.user);
+            toast.success('Successfully logged in!',{
+                position: 'top-center'
+            })
+        })
+        .catch(err=>{
+            toast.error(`${err.message.slice(10)}`, {
+                position: "top-center"
+            });
+            setUser(null)
+        })
+    }
     return (
         <div
             className="py-16 lg:py-24 relative flex flex-col items-center min-h-screen"
@@ -22,7 +47,7 @@ const Login = () => {
                 <p className="text-2xl lg:text-3xl font-semibold text-gray-700">Please Log In</p>
             </div>
             <div className="bg-white/30 backdrop-blur-lg shadow-2xl rounded-lg w-[90%] md:w-[60%] lg:w-[40%] px-6 py-8 max-w-xl">
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="form-control">
                         <label className="block text-lg font-semibold text-gray-800 mb-1">Email :</label>
                         <input
@@ -84,6 +109,7 @@ const Login = () => {
                     </NavLink>
                 </p>
             </div>
+            <ToastContainer autoClose={2000} />
         </div>
     );
 };

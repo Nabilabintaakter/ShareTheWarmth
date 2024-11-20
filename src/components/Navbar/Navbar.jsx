@@ -64,7 +64,6 @@ const Navbar = () => {
                                     className="menu menu-sm dropdown-content bg-[#D7F1F0] rounded-box z-[1] mt-3 w-52 p-4 shadow-lg text-black"
                                 >
                                     <div className="flex flex-col items-center gap-4 mb-4">
-                                        {/* Profile Picture */}
                                         <div>
                                             <img
                                                 className="w-16 h-16 rounded-full object-cover border-2 border-blue-600 shadow-sm"
@@ -72,13 +71,9 @@ const Navbar = () => {
                                                 alt="User Profile"
                                             />
                                         </div>
-
-                                        {/* Display Name */}
                                         <h1 className="text-blue-950 text-lg font-bold capitalize tracking-wide">
                                             {user?.displayName}
                                         </h1>
-
-                                        {/* View Profile Button */}
                                         <Link to='/dashboard'>
                                             <button
                                                 className="btn btn-sm lg:btn-md bg-gradient-to-r from-blue-950 to-blue-600 text-white font-medium hover:font-bold transition-all duration-300 rounded-lg shadow-md border-none w-full"
@@ -86,8 +81,6 @@ const Navbar = () => {
                                                 View Profile
                                             </button>
                                         </Link>
-
-                                        {/* Log Out Button */}
                                         <Link to='/'>
                                             <button onClick={handleSignOut}
                                                 className="btn btn-sm lg:btn-md bg-red-600 text-white font-medium hover:bg-transparent hover:text-red-600 hover:border-red-600 hover:font-bold transition-all duration-300 rounded-lg border-red-600 shadow-md flex items-center justify-center gap-2 w-full"
