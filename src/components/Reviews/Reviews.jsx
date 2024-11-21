@@ -121,12 +121,54 @@ const Reviews = () => {
                             <div className='flex items-center gap-3'>
                                 <div><img className='w-12 h-12 rounded-full object-cover bg-white' src={review4} alt="" /></div>
                                 <div>
-                                    <h1 className='text-white font-bold text-sm md:text-lg'>Rafiq Ahmed</h1>
+                                    <h1 className='text-white font-bold text-sm md:text-lg'>Rafsan Muntasir</h1>
                                     <p className='text-xs font-medium text-white'>Volunteer</p>
                                 </div>
                             </div>
                             <div className="flex-grow flex justify-center items-center">
                                 <p className='w-full text-white text-xs md:text-base text-center'>What I love about this website is how it blends convenience and transparency. Donating winter clothes was easy, and the process felt secure and well-managed. It's a thoughtful initiative that goes beyond just helping the less fortunate; it creates a community of givers. Keep it up!</p>
+                            </div>
+                            <div className="rating">
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" defaultChecked />
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='bg-[#FF5528] h-[400px] md:h-[450px] lg:h-[500px] rounded-xl p-6 md:p-8 flex flex-col justify-between'>
+                            <div className='flex items-center gap-3'>
+                                <div><img className='w-12 h-12 rounded-full object-cover bg-white' src={review5} alt="" /></div>
+                                <div>
+                                    <h1 className='text-white font-bold text-sm md:text-lg'>Jabir Rayhan</h1>
+                                    <p className='text-xs font-medium text-white'>Volunteer</p>
+                                </div>
+                            </div>
+                            <div className="flex-grow flex justify-center items-center">
+                                <p className='w-full text-white text-xs md:text-base text-center'>This platform is a perfect blend of innovation and compassion. The donation process was seamless, and I felt reassured knowing my contributions were reaching those in genuine need. It's inspiring to see how well-organized and transparent everything is. Truly a remarkable initiative!</p>
+                            </div>
+                            <div className="rating">
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" />
+                                <input type="radio" name="rating-1" className="mask mask-star" defaultChecked />
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='bg-[#FFA415] h-[400px] md:h-[450px] lg:h-[500px] rounded-xl p-6 md:p-8 flex flex-col justify-between'>
+                            <div className='flex items-center gap-3'>
+                                <div><img className='w-12 h-12 rounded-full object-cover bg-white' src={review6} alt="" /></div>
+                                <div>
+                                    <h1 className='text-white font-bold text-sm md:text-lg'>Rifat Ahmed</h1>
+                                    <p className='text-xs font-medium text-white'>Volunteer</p>
+                                </div>
+                            </div>
+                            <div className="flex-grow flex justify-center items-center">
+                                <p className='w-full text-white text-xs md:text-base text-center'>I’m impressed by how effortlessly this platform connects donors with those in need. The process is smooth, and the focus on transparency is commendable. It's heartening to know that every donation makes a meaningful impact. A wonderful initiative that truly makes a difference!</p>
                             </div>
                             <div className="rating">
                                 <input type="radio" name="rating-1" className="mask mask-star" />
