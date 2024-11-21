@@ -34,11 +34,11 @@ const Dashboard = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
         }} className="pt-5 pb-12 lg:pt-10 lg:pb-16 flex justify-center items-center">
-            <div className="flex flex-col items-center space-y-8">
+            <div className="flex flex-col items-center space-y-8 w-[90%] md:w-[80%] mx-auto">
                 <h1 className="text-center text-3xl font-medium text-blue-950 font-playfair">
                     Welcome, {user?.displayName}!
                 </h1>
-                <div className="card card-compact bg-white rounded-md w-[90%] md:w-[80%] shadow-md relative">
+                <div className="card card-compact bg-white rounded-md w-[80%] md:w-[70%] lg:w-[40%] max-w-3xl shadow-md relative">
                     <figure>
                         <img
                             src={cover}

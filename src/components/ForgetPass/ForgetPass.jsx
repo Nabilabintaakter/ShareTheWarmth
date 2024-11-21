@@ -28,7 +28,7 @@ const ForgetPass = () => {
 
     return (
         <div
-            className="py-16 lg:py-24 relative flex flex-col items-center min-h-screen"
+            className="pt-5 pb-12 lg:pt-10 lg:pb-16 relative flex flex-col items-center min-h-screen"
             style={{
                 backgroundImage: `url(${bg})`,
                 backgroundPosition: 'center',
@@ -37,7 +37,7 @@ const ForgetPass = () => {
             }}
         >
             <div className="text-center mb-8">
-                <p className="text-2xl lg:text-3xl font-semibold text-gray-700">Please reset your password</p>
+                <p className="text-2xl lg:text-3xl text-center font-semibold text-gray-700">Please reset your password</p>
             </div>
             <div className="bg-white/30 backdrop-blur-lg shadow-2xl rounded-lg w-[90%] md:w-[60%] lg:w-[40%] px-6 py-8 max-w-xl">
                 <form onSubmit={handleSubmit} className="space-y-6">
