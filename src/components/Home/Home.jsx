@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import HowItWorks from '../HowItWorks/HowItWorks';
 import Slider from '../Slider/Slider';
 import Testimonial from '../Testimonial/Testimonial';
+import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     useEffect(()=>{
@@ -33,11 +34,18 @@ const Home = () => {
                 <Blogs></Blogs>
             </section>
             {/* testimonial section starts */}
-            <section className='w-[90%] md:w-[75%] mx-auto'>
+            {/* <section className='w-[90%] md:w-[75%] mx-auto'>
                 <div className='my-8 lg:my-14'>
                     <Header title='Testimonial' subTitle='What People Think About Us'></Header>
                 </div>
                 <Testimonial></Testimonial>
+            </section> */}
+            {/* Reviews  */}
+            <section className='w-[90%] md:w-[75%] mx-auto'>
+                <div className='my-8 lg:my-14'>
+                    <Header title='Testimonial' subTitle='What People Think About Us'></Header>
+                </div>
+                <Reviews></Reviews>
             </section>
         </div>
     );

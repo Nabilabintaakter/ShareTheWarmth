@@ -17,28 +17,26 @@ const HowItWorks = () => {
         }}>
             <p className=' text-4xl lg:text-6xl font-bold text-black text-center mb-10'>How it Works</p>
             {/* Steps Section */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 w-[95%] mx-auto">
+            <div data-aos="fade" data-aos-duration="1200"
+                data-aos-delay="200" className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 w-[95%] mx-auto">
                 <Link to={!user && '/login'}
                     className="p-6 bg-white shadow-lg rounded-lg text-center w-64"
                 >
-                    <img data-aos="fade-up"data-aos-duration="1200"
-                data-aos-delay="200" className='w-14 h-14 mx-auto mb-5' src={login} alt="login" />
+                    <img  className='w-14 h-14 mx-auto mb-5' src={login} alt="login" />
                     <h3 className="text-xl font-semibold mb-2">Sign Up/Login</h3>
                     <p className="text-gray-600">Create an account or log in to start donating.</p>
                 </Link>
                 <Link to='/donationCampaign'
                     className="p-6 bg-white shadow-lg rounded-lg text-center w-64"
                 >
-                    <img data-aos="fade-up"data-aos-duration="1200"
-                data-aos-delay="200" className='w-14 h-14 mx-auto mb-5' src={campaign} alt="campaign" />
+                    <img  className='w-14 h-14 mx-auto mb-5' src={campaign} alt="campaign" />
                     <h3 className="text-xl font-semibold mb-2">Choose a Campaign</h3>
                     <p className="text-gray-600">Select a donation campaign and view details.</p>
                 </Link>
                 <Link to='/donationCampaign'
                     className="p-6 bg-white shadow-lg rounded-lg text-center w-64"
                 >
-                    <img data-aos="fade-up"data-aos-duration="1200"
-                data-aos-delay="200" className='w-14 h-14 mx-auto mb-5' src={donation} alt="donation" />
+                    <img  className='w-14 h-14 mx-auto mb-5' src={donation} alt="donation" />
                     <h3 className="text-xl font-semibold mb-2">Submit Your Donation</h3>
                     <p className="text-gray-600">Fill out the form with your items and location.</p>
                 </Link>

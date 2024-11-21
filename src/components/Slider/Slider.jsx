@@ -26,7 +26,7 @@ const Slider = () => {
                                 </div>
 
                                 <p
-                                    class="text-lg" className="mb-5 lg:mb-8 text-sm md:text-base lg:text-2xl">
+                                     className="mb-5 lg:mb-8 text-sm lg:text-2xl md:text-base ">
                                     Join us in bringing hope this winter. Your donation of warm clothes can make a life-changing difference for those in need across Bangladesh.
                                 </p>
                                 <div

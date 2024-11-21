@@ -8,7 +8,8 @@ import review6 from '../../assets/review-6.webp';
 const Testimonial = () => {
     return (
         <div className='w-[95%] flex justify-center mx-auto mb-[60px] lg:mb-24'>
-            <div className="carousel carousel-center  rounded-box max-w-[990px] mx-auto space-x-4 p-4">
+            <div data-aos="fade" data-aos-duration="1200"
+                data-aos-delay="200" className="carousel carousel-center  rounded-box max-w-[990px] mx-auto space-x-4 p-4">
                 {/* 1 */}
                 <div className="carousel-item">
                     <div className='bg-[#FFA415] h-[400px] rounded-xl p-8 flex flex-col justify-between'>
