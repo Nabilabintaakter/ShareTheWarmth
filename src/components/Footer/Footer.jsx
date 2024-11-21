@@ -1,5 +1,5 @@
 import footer from '../../assets/footer.jpg';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/finalLogo.png'
 
 const Footer = () => {
     return (
@@ -7,12 +7,11 @@ const Footer = () => {
             className="  bg-[#001F3F] p-5 lg:p-10">
             <div className='w-[95%] mx-auto max-w-7xl '>
                 <footer className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:justify-between  w-full text-white mb-8 border-b-[1px] border-b-gray-500 pb-10 ">
-                    <aside className='w-[350px]'>
-                        <div className=' gap-2 items-center flex mb-3'>
-                            <div><img className='w-10 h-10 lg:w-16 lg:h-16' src={logo} alt="" /></div>
-                            <a className="btn btn-ghost text-3xl lg:text-4xl font-black font-poiret p-0">Share the Warmth</a>
+                    <aside className=''>
+                        <div className=' mb-3 '>
+                            <div><img className='w-[250px] md:w-[280px] h-auto' src={logo} alt="" /></div>
                         </div>
-                        <p className='mb-3 '>Making donations easy — join us to help those in need and spread warmth to their lives.
+                        <p className='mb-3 w-[90%] '>Making donations easy — join us to help those in need and spread warmth to their lives.
                         </p>
                         <nav>
                             <div className="flex gap-4">

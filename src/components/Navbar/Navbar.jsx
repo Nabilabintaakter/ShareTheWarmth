@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/finalLogo.png'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { BiLogOut } from "react-icons/bi";
 import userPro from '../../assets/userPro.webp'
@@ -22,10 +22,10 @@ const Navbar = () => {
     </>
     return (
         <div className={` text-white fixed backdrop-blur-md z-50 w-full ${pathname === '/' ? 'bg-[#001f3f9c]' : 'bg-[#001f3f]'}`}>
-            <div className="navbar w-full md:w-[95%] mx-auto p-0">
+            <div className="navbar w-[95%] mx-auto p-0">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost p-0 w-fit lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
@@ -37,9 +37,8 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <div className=' gap-2 items-center hidden md:flex'>
-                        <div><img className='w-8 h-8 xl:w-10 xl:h-10' src={logo} alt="" /></div>
-                        <a className="btn btn-ghost text-3xl font-semibold font-poppins p-0">Share the Warmth</a>
+                    <div className=' gap-2 items-center hidden lg:flex'>
+                        <div><img className='w-auto h-16' src={logo} alt="" /></div>
                     </div>
                 </div>
                 <div className="navbar-center ">
@@ -48,12 +47,11 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <div className=' gap-1 items-center flex md:hidden'>
-                        <div><img className='w-8 h-8 xl:w-10 xl:h-10' src={logo} alt="" /></div>
-                        <a className="btn btn-ghost text-3xl font-semibold font-poppins p-0">Share the Warmth</a>
+                    <div className=' gap-1 items-center flex justify-center lg:hidden'>
+                        <div><img className='w-[140px] md:w-[180px] h-auto' src={logo} alt="" /></div>
                     </div>
                 </div>
-                <div className="navbar-end mr-3 md:mr-0">
+                <div className="navbar-end">
                     {
                         user ?
                             <div className="dropdown dropdown-end">

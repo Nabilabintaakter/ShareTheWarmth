@@ -3,7 +3,7 @@ import about2 from '../../assets/about-2.jpg'
 
 const About = () => {
     return (
-        <div className=' flex flex-col lg:flex-row gap-5 lg:gap-20 lg:mb-24 md:mb-[410px] mb-[330px] max-h-[510px] max-w-7xl mx-auto'>
+        <div className=' flex flex-col lg:flex-row gap-5 lg:gap-20 lg:mb-24 md:mb-[410px] mb-[60px] lg:max-h-[510px] max-w-7xl mx-auto'>
             <div className='relative w-full lg:w-1/2'>
                 <img className='w-full h-full object-cover' src={about1} alt="" />
                 <div className=''><img data-aos="fade-right"
@@ -12,10 +12,10 @@ const About = () => {
             </div>
             <div className='w-full lg:w-1/2 flex flex-col gap-6 lg:justify-between '>
                 <div className=''>
-                    <h1 className='text-3xl font-bold mb-3 xl:w-8/12'>Spreading Warmth, One Donation at a Time</h1>
+                    <h1 className='text-2xl md:text-3xl font-bold mb-3 xl:w-8/12'>Spreading Warmth, One Donation at a Time</h1>
                     <p className='text-gray-500'>Our mission is to bridge the gap between compassionate donors and those in need during the harsh winters of Bangladesh. By connecting generous hearts with vulnerable communities, we aim to ensure no one has to endure the cold without proper clothing. Users can contribute by donating winter clothes, spreading the word, or volunteering their time to help others. Together, let’s create a warmer, kinder world.</p>
                 </div>
-                <div className='grid grid-cols-2 gap-5'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                     <div className=' h-[84px] w-44'>
                         <p className='text-[#FEA501] text-3xl font-extrabold'>100+</p>
                         <p className='text-gray-500'>Families Received Winter Aid Last Year</p>

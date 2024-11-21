@@ -33,16 +33,16 @@ const Dashboard = () => {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-        }} className="pt-5 pb-12 lg:pt-10 lg:pb-16 flex justify-center items-center">
+        }} className="pt-10 pb-12 lg:pb-16 flex justify-center items-center">
             <div data-aos="fade"
                 data-aos-duration="1200"
-                data-aos-delay="200" className="flex flex-col items-center space-y-8 w-[90%] md:w-[80%] mx-auto">
+                data-aos-delay="200" className="flex flex-col items-center space-y-8 w-[97%] md:w-[80%] mx-auto">
                 <h1 data-aos="fade-down"
                     data-aos-duration="1200"
                     data-aos-delay="200" className="text-center text-3xl font-semibold text-blue-950 font-poppins">
-                    Welcome, {user?.displayName}!
+                    Welcome, <br className="block md:hidden" /> {user?.displayName}!
                 </h1>
-                <div className="card card-compact bg-white rounded-md w-[80%] md:w-[70%] lg:w-[40%] xl:w-[30%] max-w-2xl shadow-md relative">
+                <div className="card card-compact bg-white rounded-md w-[95%] md:w-[70%] lg:w-[40%] xl:w-[30%] max-w-2xl shadow-md relative">
                     <figure>
                         <img
                             src={cover}
@@ -52,11 +52,11 @@ const Dashboard = () => {
                         <img
                             src={user?.photoURL}
                             alt="User"
-                            className="absolute top-20 left-1/2 transform -translate-x-1/2 w-28 h-28 object-cover rounded-full bg-white p-1 shadow-md z-10"
+                            className="absolute top-20 left-1/2 transform -translate-x-1/2 w-36 h-36 md:w-28 md:h-28 object-cover rounded-full bg-white p-1 shadow-md z-10"
                         />
                     </figure>
                     <div className="p-4 flex flex-col items-center">
-                        <div className="mb-2 mt-12 text-center">
+                        <div className="mb-2 mt-20 md:mt-12 text-center">
                             <span className="text-lg font-medium text-gray-700">
                                 Username
                             </span>
