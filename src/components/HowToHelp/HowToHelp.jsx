@@ -1,76 +1,130 @@
-import React from 'react';
-import bgImage from '../../assets/how-bg-3.jpg';
 import { Link } from 'react-router-dom';
+import bg from '../../assets/how-bg-3.jpg';
 
 const HowToHelp = () => {
     return (
-        <div
-            style={{
-                backgroundImage: `url(${bgImage})`,
+        <div>
+            {/* Hero Section */}
+            <div className='' style={{
+                backgroundImage: `url(${bg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-            }}
-            className=" px-5 lg:px-20 text-white"
-        >
-            <div className="bg-bue-950 bg-opacity-30 p-8 rounded-lg max-w-7xl mx-auto text-blue-950">
-                {/* Hero Section */}
-                <div className='py-7 flex flex-col justify-center items-center mx-auto w-full lg:w-[60%]'>
-                    <p className=' text-4xl lg:text-6xl font-bold text-black mb-3 text-center'>How You Can Help</p>
-                    <h1 className=' text-center text-base mb-3  md:text-lg font-semibold'>Together, we can make this winter warmer for those in need. Explore how you can contribute and make an impact.</h1>
-                </div>
+                backgroundRepeat: 'no-repeat'
+            }} >
+                <section
+                    className="bg-cover bg-center text-center pt-10"
 
-                {/* Steps to Help */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Donate Clothes */}
-                    <Link to='/donationCampaign' className="bg-white text-gray-900 rounded-lg shadow-lg p-6">
-                        <h2 className="text-2xl font-semibold mb-4">Donate Winter Clothes</h2>
-                        <p className="text-base mb-6">
-                            Share warmth by donating winter essentials like jackets, sweaters, blankets, socks, and caps. Every piece makes a difference.
-                        </p>
-                        <button className="btn bg-[#FEA501] text-white hover:bg-blue-600 transition rounded-md px-5 py-2">
-                            Donate Clothes
-                        </button>
-                    </Link>
+                >
+                    <h1 data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-delay="300" className="text-4xl md:text-6xl font-bold mb-4 text-shadow-lg">
+                        How to Help
+                    </h1>
+                    <p className="text-lg md:text-xl text-center w-[95%] md:w-[80%] lg:w-[50%] mx-auto">
+                        Together, we can bring warmth and hope to those in need this winter.This winter, thousands of underprivileged individuals across
+                        Bangladesh are braving the cold without proper clothing or
+                        resources. Your simple acts of kindness can bring warmth and hope
+                        into their lives. Here’s how you can help:
+                    </p>
+                </section>
 
-                    {/* Financial Support */}
-                    <div className="bg-white text-gray-900 rounded-lg shadow-lg p-6">
-                        <h2 className="text-2xl font-semibold mb-4">Make a Financial Contribution</h2>
-                        <p className="text-base mb-6">
-                            Help us buy warm clothing for those in need. For just 1000 BDT, you can provide a blanket for a family.
-                        </p>
-                        <button className="btn bg-[#FEA501] text-white hover:bg-blue-600 transition rounded-md px-5 py-2">
-                            Donate Money
-                        </button>
+                {/* Details Section */}
+                <section data-aos="fade"
+                        data-aos-duration="1000"
+                        data-aos-delay="300" className="px-6 py-12">
+                    <div className="max-w-6xl mx-auto text-center">
+                        {/* Steps to Help */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {/* Card 1 */}
+                            <div className="bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-all duration-700 ease-in-out cursor-pointer">
+                                <h3 className="text-xl font-bold text-yellow-600 mb-4">
+                                    Donate Winter Clothes
+                                </h3>
+                                <p className="text-gray-700">
+                                    Provide gently used or new winter clothes like jackets, sweaters,
+                                    and blankets to our collection points. These will be distributed
+                                    to people in need across rural and urban areas.
+                                </p>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className="bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-all duration-700 ease-in-out cursor-pointer">
+                                <h3 className="text-xl font-bold text-yellow-600 mb-4">
+                                    Financial Donations
+                                </h3>
+                                <p className="text-gray-700">
+                                    Your monetary support helps us purchase new clothing and
+                                    resources, ensuring that everyone receives what they need during
+                                    the harsh winter months.
+                                </p>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div className="bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-all duration-700 ease-in-out cursor-pointer">
+                                <h3 className="text-xl font-bold text-yellow-600 mb-4">
+                                    Volunteer Your Time
+                                </h3>
+                                <p className="text-gray-700">
+                                    Join our team as a volunteer and assist in organizing,
+                                    collecting, and distributing winter essentials at donation
+                                    centers.
+                                </p>
+                            </div>
+
+                            {/* Card 4 */}
+                            <div className="bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-all duration-700 ease-in-out cursor-pointer">
+                                <h3 className="text-xl font-bold text-yellow-600 mb-4">
+                                    Host Donation Drives
+                                </h3>
+                                <p className="text-gray-700">
+                                    Organize a donation drive in your community, workplace, or
+                                    school. Together, we can collect more and reach further.
+                                </p>
+                            </div>
+
+                            {/* Card 5 */}
+                            <div className="bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-all duration-700 ease-in-out cursor-pointer">
+                                <h3 className="text-xl font-bold text-yellow-600 mb-4">
+                                    Spread the Word
+                                </h3>
+                                <p className="text-gray-700">
+                                    Share our campaign on social media, tell your friends and
+                                    family, and inspire others to join this mission of warmth and
+                                    compassion.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                </section>
+            </div>
 
-                    {/* Spread Awareness */}
-                    <div className="bg-white text-gray-900 rounded-lg shadow-lg p-6">
-                        <h2 className="text-2xl font-semibold mb-4">Spread Awareness Among People</h2>
-                        <p className="text-base mb-6">
-                            Inspire others to contribute by sharing our mission on social media or hosting a local drive in your community.
-                        </p>
-                        <button className="btn bg-[#FEA501] text-white hover:bg-blue-600 transition rounded-md px-5 py-2">
-                            Share Now
-                        </button>
-                    </div>
-                </div>
-
-                {/* Why Help Matters */}
-                <div className="mt-16 w-full lg:w-[60%] mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-8">Why Your Help Matters</h2>
-                    <p className="text-center text-lg">
-                        Winter is a harsh season for underprivileged families in Bangladesh. Your contributions can save lives by providing warmth and hope to those who need it most.
+            {/* Why Help Section */}
+            <section className="py-12 px-6 bg-gray-100">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold mb-6 text-gray-800">
+                        Why Your Support Matters
+                    </h2>
+                    <p className="text-lg text-gray-600 mb-6">
+                        Every year, the chilling winter claims lives due to lack of proper
+                        clothing and shelter. A small contribution from you can save lives
+                        and restore hope in those who have lost it. Let’s work together to
+                        bring smiles and comfort to the less fortunate this winter.
                     </p>
                 </div>
+            </section>
 
-                {/* Call to Action */}
-                <div className="flex justify-center mt-12">
-                    <button className="btn btn-sm lg:btn-md bg-gradient-to-r from-blue-950 to-blue-600 text-white font-medium hover:font-bold transition-all duration-300 rounded-lg shadow-md border-none">
-                        Join the Cause Now
-                    </button>
-                </div>
-            </div>
+            {/* Call to Action */}
+            <section className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-center py-8">
+                <p className="text-2xl font-bold text-white">
+                    Ready to Make a Difference?
+                </p>
+                <Link
+                    to='/donationCampaign'
+                    className="mt-4 inline-block px-8 py-4 bg-white text-yellow-600 font-semibold text-xl rounded-lg shadow-lg hover:bg-yellow-200 transition-all duration-300"
+                >
+                    Donate Now
+                </Link>
+            </section>
         </div>
     );
 };
