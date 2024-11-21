@@ -4,6 +4,7 @@ import logo from '../../assets/finalLogo.png'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { BiLogOut } from "react-icons/bi";
 import userPro from '../../assets/userPro.webp'
+import bg from '../../assets/Shiny Overlay-2.svg'
 const Navbar = () => {
     const scrollToTop = () => {
         window.scrollTo({
@@ -64,30 +65,36 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <ul
+                                    style={{
+                                        backgroundImage: `url(${bg})`,
+                                        backgroundPosition: 'center',
+                                        backgroundSize: 'cover',
+                                        backgroundRepeat: 'no-repeat'
+                                    }}
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content bg-[#D7F1F0] rounded-box z-[1] mt-3 w-60 p-4 shadow-lg text-black"
+                                    className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-60 p-4 shadow-lg text-black"
                                 >
                                     <div className="flex flex-col items-center gap-4 mb-4">
                                         <div >
                                             <img
-                                                className="w-16 h-16 rounded-full object-cover border-2 border-blue-600 shadow-sm"
+                                                className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm"
                                                 src={user?.photoURL}
                                                 alt="User Profile"
                                             />
                                         </div>
-                                        <h1 className="text-blue-950 text-lg font-bold capitalize tracking-wide text-center">
+                                        <h1 className="text-[#D8F2F1] text-lg font-bold capitalize tracking-wide text-center">
                                             {user?.displayName}
                                         </h1>
                                         <Link to='/dashboard'>
                                             <button
-                                                className="btn btn-sm lg:btn-md bg-gradient-to-r from-blue-950 to-blue-600 text-white font-medium hover:font-bold transition-all duration-300 rounded-lg shadow-md border-none w-full"
+                                                className="btn btn-sm lg:btn-md bg-gradient-to-r from-white to-yellow-100 text-blue-950 font-bold hover:font-bold hover:from-blue-950 hover:to-blue-600 hover:text-white transition-all duration-500 rounded-lg shadow-md border-none w-full"
                                             >
                                                 View Profile
                                             </button>
                                         </Link>
                                         <Link to='/'>
                                             <button onClick={handleSignOut}
-                                                className="btn btn-sm lg:btn-md bg-red-600 text-white font-medium hover:bg-transparent hover:text-red-600 hover:border-red-600 hover:font-bold transition-all duration-300 rounded-lg border-red-600 shadow-md flex items-center justify-center gap-2 w-full"
+                                                className="btn btn-sm lg:btn-md bg-red-500 text-white font-bold hover:bg-white hover:text-red-500 hover:border-white hover:font-bold transition-all duration-500 rounded-lg border-red-500 shadow-md flex items-center justify-center gap-2 w-full"
                                             >
                                                 <BiLogOut className="text-xl" />
                                                 Log Out
