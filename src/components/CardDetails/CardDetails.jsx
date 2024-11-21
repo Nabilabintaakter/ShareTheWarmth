@@ -1,4 +1,3 @@
-import React from 'react';
 import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';

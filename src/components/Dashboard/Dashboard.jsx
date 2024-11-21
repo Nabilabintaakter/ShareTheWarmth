@@ -8,9 +8,9 @@ import { useEffect } from 'react';
 
 const Dashboard = () => {
     const { user, loading } = useContext(AuthContext);
-    useEffect(()=>{
+    useEffect(() => {
         document.title = 'Dashboard | Share the Warmth';
-    },[])
+    }, [])
 
     if (loading) {
         return (
@@ -60,29 +60,33 @@ const Dashboard = () => {
                     </figure>
                     <div className="p-4 flex flex-col items-center">
                         <div className="mb-2 mt-20 md:mt-12 text-center">
-                            <span className="text-lg font-medium text-gray-700">
+                            <span className="text-sm font-medium text-gray-500 tracking-wide">
                                 Username
                             </span>
-                            <h1 className="text-lg font-bold text-gray-900">
+                            <h1 className="text-2xl font-extrabold text-transparent bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 bg-clip-text">
                                 {user?.displayName}
                             </h1>
                         </div>
                         <div className="mb-5 text-center">
-                            <span className="text-lg font-medium text-gray-700">
+                            <span className="text-sm font-medium text-gray-500 tracking-wide">
                                 Email
                             </span>
-                            <p className="text-lg font-bold text-gray-900">
+                            <p className="text-lg font-semibold text-gray-800">
                                 {user?.email}
                             </p>
                         </div>
-                        <Link data-aos="zoom-in"
+                        <Link
+                            data-aos="zoom-in"
                             data-aos-duration="1200"
-                            data-aos-delay="200" to="/updateProfile">
-                            <button className="btn btn-sm lg:btn-md bg-gradient-to-r from-blue-950 to-blue-600 text-white font-medium hover:font-bold transition-all duration-300 rounded-md shadow-md border-none">
+                            data-aos-delay="200"
+                            to="/updateProfile"
+                        >
+                            <button className="btn btn-sm lg:btn-md bg-gradient-to-r from-blue-700 to-purple-500 text-white font-medium hover:font-bold transition-all duration-300 rounded-md shadow-lg border-none">
                                 Update Profile
                             </button>
                         </Link>
                     </div>
+
                 </div>
             </div>
         </div>

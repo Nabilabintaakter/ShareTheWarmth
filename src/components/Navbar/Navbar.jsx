@@ -27,7 +27,7 @@ const Navbar = () => {
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost p-0 w-fit lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-8">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
                         user ?
                             <div className="dropdown dropdown-end">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-12 rounded-full">
+                                    <div className="w-10 md:w-12 rounded-full">
                                         <img
                                             className='object-cover'
                                             alt="Tailwind CSS Navbar component"
@@ -72,7 +72,7 @@ const Navbar = () => {
                                         backgroundRepeat: 'no-repeat'
                                     }}
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-60 p-4 shadow-lg text-black"
+                                    className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-64 p-4 shadow-lg text-black"
                                 >
                                     <div className="flex flex-col items-center gap-4 mb-4">
                                         <div >
@@ -82,9 +82,12 @@ const Navbar = () => {
                                                 alt="User Profile"
                                             />
                                         </div>
-                                        <h1 className="text-[#D8F2F1] text-lg font-bold capitalize tracking-wide text-center">
+                                        <h1
+                                            className="text-[#D8F2F1] text-2xl font-extrabold capitalize tracking-wide text-center bg-gradient-to-r from-teal-300 via-cyan-500 to-blue-500 bg-clip-text text-transparent"
+                                        >
                                             {user?.displayName}
                                         </h1>
+
                                         <Link to='/dashboard'>
                                             <button
                                                 className="btn btn-sm lg:btn-md bg-gradient-to-r from-white to-yellow-100 text-blue-950 font-bold hover:font-bold hover:from-blue-950 hover:to-blue-600 hover:text-white transition-all duration-500 rounded-lg shadow-md border-none w-full"

@@ -12,7 +12,6 @@ The primary purpose of this website is to:
 ## Live URL 🔗
 
 [Visit the Website](#)  
-*(Replace `#` with the live link to your project.)*
 
 ## Key Features ✨
 
