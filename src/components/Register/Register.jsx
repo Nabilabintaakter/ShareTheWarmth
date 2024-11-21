@@ -7,12 +7,17 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from 'react';
 
 const Register = () => {
     const { handleSignUp, setUser, handleUpdateProfile, handleGoogleSignIn, setLoading } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null)
     const navigate = useNavigate();
+
+    useEffect(()=>{
+        document.title = 'Register | Share the Warmth';
+    },[])
 
     const handleSubmit = e => {
         setError('')

@@ -7,12 +7,18 @@ import { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from 'react';
+
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { handleLogin, setUser, handleGoogleSignIn,setLoading ,myEmail,setMyEmail} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const emailRef = useRef();
+
+    useEffect(()=>{
+        document.title = 'Login | Share the Warmth';
+    },[])
 
     const handleSubmit = e => {
         e.preventDefault();

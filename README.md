@@ -31,10 +31,12 @@ The primary purpose of this website is to:
 - **CSS Animations**: AOS (Animate On Scroll)
 - **Routing**: React Router
 
-## npm Packages Used 📦
+## npm Packages Used 📦  
+- **React Router**: For navigation between pages.  
+- **AOS**: For scroll-based animations.  
+- **React Toastify**: For dynamic toast notifications.  
+- **Firebase**: For authentication and backend integration.  
+- **React Loader Spinner**: For displaying loading indicators during data fetching.  
+- **React Icons**: For adding various icons to enhance the UI.  
 
-- **React Router**: For navigation between pages.
-- **AOS**: For scroll-based animations.
-- **React Toastify**: For dynamic toast notifications.
-- **Firebase**: For authentication and backend integration.
 

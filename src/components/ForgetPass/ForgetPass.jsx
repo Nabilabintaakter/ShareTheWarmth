@@ -3,9 +3,14 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import bg from '../../assets/how-bg-3.jpg';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from 'react';
 
 const ForgetPass = () => {
     const { handleResetPassword, myEmail, setMyEmail } = useContext(AuthContext);
+
+    useEffect(()=>{
+        document.title = 'Forgot password | Share the Warmth';
+    },[])
 
     const handleSubmit = (e) => {
         e.preventDefault();

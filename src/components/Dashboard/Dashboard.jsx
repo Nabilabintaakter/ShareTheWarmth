@@ -4,10 +4,13 @@ import cover from "../../assets/cover.jpg";
 import { Link } from "react-router-dom";
 import bg from '../../assets/how-bg-3.jpg';
 import { ThreeDots } from 'react-loader-spinner';
+import { useEffect } from 'react';
 
 const Dashboard = () => {
     const { user, loading } = useContext(AuthContext);
-    console.log(user);
+    useEffect(()=>{
+        document.title = 'Dashboard | Share the Warmth';
+    },[])
 
     if (loading) {
         return (

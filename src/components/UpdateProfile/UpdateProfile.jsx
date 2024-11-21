@@ -4,11 +4,15 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from 'react';
 
 const UpdateProfile = () => {
     const { handleUpdateProfile,setLoading } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError]= useState();
+    useEffect(()=>{
+        document.title = 'Update profile | Share the Warmth';
+    },[])
 
     const handleSubmit = (e) => {
         setError('')

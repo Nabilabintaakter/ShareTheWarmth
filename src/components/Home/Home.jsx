@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import About from '../About/About';
 import Blogs from '../Blogs/Blogs';
 import Header from '../Header/Header';
@@ -7,6 +8,9 @@ import Slider from '../Slider/Slider';
 import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
+    useEffect(()=>{
+        document.title = 'Home | Share the Warmth';
+    },[])
     return (
         <div >
             {/* banner starts */}

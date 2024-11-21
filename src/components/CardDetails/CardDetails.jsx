@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -6,6 +7,10 @@ import 'react-toastify/dist/ReactToastify.css';
 const CardDetails = () => {
     const singleData = useLoaderData();
     const { title, image, description, status, contactInfo, division } = singleData || {};
+
+    useEffect(()=>{
+        document.title = `${title} | Share the Warmth`;
+    },[])
 
     const handleSubmit = (e) => {
         e.preventDefault();

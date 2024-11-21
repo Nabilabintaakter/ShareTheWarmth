@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import bg from '../../assets/how-bg-3.jpg';
 
 const HowToHelp = () => {
+
+    useEffect(()=>{
+        document.title = 'How to help | Share the Warmth';
+    },[])
     return (
         <div>
             {/* Hero Section */}

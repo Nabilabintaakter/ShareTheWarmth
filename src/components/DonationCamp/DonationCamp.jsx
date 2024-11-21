@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Card from '../Card/Card';
 import Header from '../Header/Header';
@@ -7,6 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const DonationCamp = () => {
+    useEffect(()=>{
+        document.title = 'Campaigns | Share the Warmth';
+    },[])
     const donations = useLoaderData();
     return (
         <div className='w-full bg-[#D7F1F2]'>
