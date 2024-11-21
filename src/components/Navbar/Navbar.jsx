@@ -5,13 +5,20 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { BiLogOut } from "react-icons/bi";
 import userPro from '../../assets/userPro.webp'
 const Navbar = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     const { pathname } = useLocation();
     const { user, handleSignOut } = useContext(AuthContext);
     const links = <>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/'>HOME</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/howToHelp'>HOW TO HELP</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-[#FEA501]  font-semibold hover:text-[#FEA501]' : 'text-white hover:text-[#FEA501]'} to='/dashboard'>DASHBOARD</NavLink>
+        <NavLink onClick={scrollToTop} className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/'>HOME</NavLink>
+        <NavLink onClick={scrollToTop} className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/donationCampaign'>DONATION CAMPAIGN</NavLink>
+        <NavLink onClick={scrollToTop} className={({ isActive }) => isActive ? 'text-[#FEA501] hover:text-[#FEA501]  mr-4 xl:mr-8 font-semibold ' : 'text-white mr-4 xl:mr-8 hover:text-[#FEA501]'} to='/howToHelp'>HOW TO HELP</NavLink>
+        <NavLink onClick={scrollToTop} className={({ isActive }) => isActive ? 'text-[#FEA501]  font-semibold hover:text-[#FEA501]' : 'text-white hover:text-[#FEA501]'} to='/dashboard'>DASHBOARD</NavLink>
     </>
     return (
         <div className={` text-white fixed backdrop-blur-md z-50 w-full ${pathname === '/' ? 'bg-[#001f3f9c]' : 'bg-[#001f3f]'}`}>
@@ -32,7 +39,7 @@ const Navbar = () => {
                     </div>
                     <div className=' gap-2 items-center hidden md:flex'>
                         <div><img className='w-8 h-8 xl:w-10 xl:h-10' src={logo} alt="" /></div>
-                        <a className="btn btn-ghost text-3xl font-semibold font-poiret p-0">Share the Warmth</a>
+                        <a className="btn btn-ghost text-3xl font-semibold font-poppins p-0">Share the Warmth</a>
                     </div>
                 </div>
                 <div className="navbar-center ">
@@ -43,7 +50,7 @@ const Navbar = () => {
                     </div>
                     <div className=' gap-1 items-center flex md:hidden'>
                         <div><img className='w-8 h-8 xl:w-10 xl:h-10' src={logo} alt="" /></div>
-                        <a className="btn btn-ghost text-3xl font-semibold font-poiret p-0">Share the Warmth</a>
+                        <a className="btn btn-ghost text-3xl font-semibold font-poppins p-0">Share the Warmth</a>
                     </div>
                 </div>
                 <div className="navbar-end mr-3 md:mr-0">
@@ -63,7 +70,7 @@ const Navbar = () => {
                                     className="menu menu-sm dropdown-content bg-[#D7F1F0] rounded-box z-[1] mt-3 w-60 p-4 shadow-lg text-black"
                                 >
                                     <div className="flex flex-col items-center gap-4 mb-4">
-                                        <div>
+                                        <div >
                                             <img
                                                 className="w-16 h-16 rounded-full object-cover border-2 border-blue-600 shadow-sm"
                                                 src={user?.photoURL}

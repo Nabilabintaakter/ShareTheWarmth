@@ -20,7 +20,7 @@ const HowToHelp = () => {
                         data-aos-delay="300" className="text-4xl md:text-6xl font-bold mb-4 text-shadow-lg">
                         How to Help
                     </h1>
-                    <p className="text-lg md:text-xl text-center w-[95%] md:w-[80%] lg:w-[50%] mx-auto">
+                    <p className="text-lg md:text-xl text-center w-[95%] md:w-[80%] lg:w-[50%] mx-auto max-w-5xl">
                         Together, we can bring warmth and hope to those in need this winter.This winter, thousands of underprivileged individuals across
                         Bangladesh are braving the cold without proper clothing or
                         resources. Your simple acts of kindness can bring warmth and hope

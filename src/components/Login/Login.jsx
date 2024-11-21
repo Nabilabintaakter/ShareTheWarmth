@@ -74,11 +74,13 @@ const Login = () => {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <div data-aos="fade-down"
+            <div className="text-center mb-8">
+                <h1 data-aos="fade-down"
                 data-aos-duration="1200"
-                data-aos-delay="200" className="text-center mb-8">
-                <h1 className="text-4xl lg:text-5xl font-extrabold mb-2">Welcome Back!</h1>
-                <p className="text-2xl lg:text-3xl font-semibold text-gray-700">Please Log In</p>
+                data-aos-delay="200" className="text-4xl lg:text-5xl font-extrabold mb-2">Welcome Back!</h1>
+                <p data-aos="fade"
+                data-aos-duration="1200"
+                data-aos-delay="200" className="text-2xl lg:text-3xl font-semibold text-gray-700">Please Log In</p>
             </div>
             <div  className="bg-white/30 backdrop-blur-lg shadow-2xl rounded-lg w-[90%] md:w-[60%] lg:w-[40%] px-6 py-8 max-w-xl">
                 <form onSubmit={handleSubmit} className="space-y-6">

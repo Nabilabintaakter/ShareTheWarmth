@@ -39,10 +39,10 @@ const Dashboard = () => {
                 data-aos-delay="200" className="flex flex-col items-center space-y-8 w-[90%] md:w-[80%] mx-auto">
                 <h1 data-aos="fade-down"
                     data-aos-duration="1200"
-                    data-aos-delay="200" className="text-center text-3xl font-medium text-blue-950 font-playfair">
+                    data-aos-delay="200" className="text-center text-3xl font-semibold text-blue-950 font-poppins">
                     Welcome, {user?.displayName}!
                 </h1>
-                <div className="card card-compact bg-white rounded-md w-[80%] md:w-[70%] lg:w-[40%] max-w-3xl shadow-md relative">
+                <div className="card card-compact bg-white rounded-md w-[80%] md:w-[70%] lg:w-[40%] xl:w-[30%] max-w-2xl shadow-md relative">
                     <figure>
                         <img
                             src={cover}

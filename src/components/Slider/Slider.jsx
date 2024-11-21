@@ -8,7 +8,7 @@ const Slider = () => {
     return (
         <div >
             <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full h-[400px] lg:h-[550px]  xl:h-[700px]">
+                <div  id="slide1" className="carousel-item relative w-full h-[400px] lg:h-[550px]  xl:h-[700px]">
                     <div
                         className="hero"
                         style={{
@@ -25,16 +25,14 @@ const Slider = () => {
                                     <h1 className="mb-5 lg:mb-7 text-3xl md:text-4xl lg:text-7xl font-bold">Spread Warmth, Save Lives</h1>
                                 </div>
 
-                                <p data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay="300"
+                                <p
                                     class="text-lg" className="mb-5 lg:mb-8 text-sm md:text-base lg:text-2xl">
                                     Join us in bringing hope this winter. Your donation of warm clothes can make a life-changing difference for those in need across Bangladesh.
                                 </p>
                                 <div
-                                     data-aos="zoom-in"
-                                     data-aos-duration="600"
-                                     data-aos-delay="200"
+                                    data-aos="fade-right"
+                                    data-aos-duration="600"
+                                    data-aos-delay="200"
                                 >
                                     <Link to='/donationCampaign' className="btn btn-md lg:btn-lg bg-[#FEA501] rounded-md text-white hover:text-black hover:bg-white font-bold border-none transition-all duration-700">DONATE NOW</Link>
                                 </div>

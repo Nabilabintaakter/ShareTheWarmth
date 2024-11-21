@@ -3,8 +3,11 @@ import campaign from '../../assets/advertising.png';
 import donation from '../../assets/healthcare.png';
 import { Link } from 'react-router-dom';
 import bg from '../../assets/how-bg-3.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const HowItWorks = () => {
+    const {user} = useContext(AuthContext);
     return (
         <section className="py-12 lg:mb-24 mb-[60px] " style={{
             backgroundImage: `url(${bg})`,
@@ -15,7 +18,7 @@ const HowItWorks = () => {
             <p className=' text-4xl lg:text-6xl font-bold text-black text-center mb-10'>How it Works</p>
             {/* Steps Section */}
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 w-[95%] mx-auto">
-                <Link to='/login'
+                <Link to={!user && '/login'}
                     className="p-6 bg-white shadow-lg rounded-lg text-center w-64"
                 >
                     <img data-aos="fade-up"data-aos-duration="1200"
