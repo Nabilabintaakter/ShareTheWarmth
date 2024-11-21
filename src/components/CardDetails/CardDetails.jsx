@@ -20,7 +20,7 @@ const CardDetails = () => {
     };
 
     return (
-        <div className="w-[75%] max-w-7xl mx-auto pt-5 pb-12 md:pt-10 md:pb-24">
+        <div className="w-[90%] md:w-[75%] max-w-7xl mx-auto pt-5 pb-12 md:pt-10 md:pb-24">
             <div data-aos="fade"
                 data-aos-duration="1200"
                 data-aos-delay="200" className="flex flex-col lg:flex-row rounded-2xl bg-base-100 shadow-lg">
@@ -42,7 +42,7 @@ const CardDetails = () => {
             <p className="text-3xl lg:text-4xl font-bold text-black text-center mt-10 lg:mt-16 mb-4 lg:mb-5">Complete Your Donation</p>
             <div data-aos="fade"
                 data-aos-duration="1200"
-                data-aos-delay="200" className="w-[90%] lg:w-[50%] xl:[70%] mx-auto max-w-7xl bg-[#D7F1F2] p-10 rounded-xl">
+                data-aos-delay="200" className="w-full lg:w-[50%] xl:[70%] mx-auto max-w-7xl bg-[#D7F1F2] p-10 rounded-xl m-0">
                 <form onSubmit={handleSubmit}>
                     <label className="block text-lg font-bold text-gray-900">Quantity of Items:</label>
                     <input
