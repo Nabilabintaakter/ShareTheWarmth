@@ -65,7 +65,6 @@ const Login = () => {
             })
     }
     const handleForgetPass = ()=>{
-        console.log(emailRef.current.value);
         const email = emailRef.current.value;
         setMyEmail(email)
     }

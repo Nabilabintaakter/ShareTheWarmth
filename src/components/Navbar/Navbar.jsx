@@ -4,7 +4,7 @@ import logo from '../../assets/finalLogo.png'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { BiLogOut } from "react-icons/bi";
 import userPro from '../../assets/userPro.webp'
-import bg from '../../assets/Shiny Overlay-2.svg'
+
 const Navbar = () => {
     const scrollToTop = () => {
         window.scrollTo({
@@ -65,14 +65,8 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <ul
-                                    style={{
-                                        backgroundImage: `url(${bg})`,
-                                        backgroundPosition: 'center',
-                                        backgroundSize: 'cover',
-                                        backgroundRepeat: 'no-repeat'
-                                    }}
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-64 p-4 shadow-lg text-black"
+                                    className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-64 p-4 shadow-lg text-black bg-gradient-to-br from-blue-950 to-blue-600"
                                 >
                                     <div className="flex flex-col items-center gap-4 mb-4">
                                         <div >
