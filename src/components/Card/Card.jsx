@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 const Card = ({ donation }) => {
     const {id,image,title,description,division} = donation || {}
     return (
-        <div className="card card-compact bg-white shadow-lg">
+        <div data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-delay="200" className="card card-compact bg-white shadow-lg">
             <figure className='relative'>
                 <img
                     className='w-full h-[280px] xl:h-[360px]  object-cover rounded-xl'

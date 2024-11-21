@@ -52,7 +52,9 @@ const UpdateProfile = () => {
             }}
         >
             <div className="text-center mb-8">
-                <p className="text-2xl lg:text-3xl text-center font-semibold text-gray-700">Please update your information</p>
+                <p data-aos="fade-down"
+                data-aos-duration="1200"
+                data-aos-delay="200" className="text-2xl lg:text-3xl text-center font-semibold text-gray-700">Please update your information</p>
             </div>
             <div className="bg-white/30 backdrop-blur-lg shadow-2xl rounded-lg w-[90%] md:w-[60%] lg:w-[40%] px-6 py-8 max-w-xl">
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -79,6 +81,9 @@ const UpdateProfile = () => {
                     {error && <p className='text-red-500 font-medium text-lg'>{error}</p>}
                     <div className="form-control">
                         <button
+                            data-aos="zoom-in"
+                            data-aos-duration="1200"
+                            data-aos-delay="200"
                             type="submit"
                             className="flex items-center justify-center gap-3 bg-green-500 text-white py-3 rounded-md text-lg font-medium border-[1px] border-green-500 hover:bg-white hover:border hover:border-green-500 hover:text-green-500 hover:font-bold transition-all duration-300"
                         >

@@ -6,7 +6,9 @@ const About = () => {
         <div className=' flex flex-col lg:flex-row gap-5 lg:gap-20 lg:mb-24 md:mb-[410px] mb-[330px] max-h-[510px] max-w-7xl mx-auto'>
             <div className='relative w-full lg:w-1/2'>
                 <img className='w-full h-full object-cover' src={about1} alt="" />
-                <div className=''><img className='bg-white pt-1 md:pt-2 pl-1 md:pl-2 absolute w-[180px] md:w-[300px] bottom-0 right-0' src={about2} alt="" /></div>
+                <div className=''><img data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="200" className='bg-white pt-1 md:pt-2 pl-1 md:pl-2 absolute w-[180px] md:w-[300px] bottom-0 right-0' src={about2} alt="" /></div>
             </div>
             <div className='w-full lg:w-1/2 flex flex-col gap-6 lg:justify-between '>
                 <div className=''>

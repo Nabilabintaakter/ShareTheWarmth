@@ -6,7 +6,7 @@ import bg from '../../assets/how-bg-3.jpg';
 import { ThreeDots } from 'react-loader-spinner';
 
 const Dashboard = () => {
-    const { user, loading } = useContext(AuthContext); 
+    const { user, loading } = useContext(AuthContext);
     console.log(user);
 
     if (loading) {
@@ -34,8 +34,12 @@ const Dashboard = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
         }} className="pt-5 pb-12 lg:pt-10 lg:pb-16 flex justify-center items-center">
-            <div className="flex flex-col items-center space-y-8 w-[90%] md:w-[80%] mx-auto">
-                <h1 className="text-center text-3xl font-medium text-blue-950 font-playfair">
+            <div data-aos="fade"
+                data-aos-duration="1200"
+                data-aos-delay="200" className="flex flex-col items-center space-y-8 w-[90%] md:w-[80%] mx-auto">
+                <h1 data-aos="fade-down"
+                    data-aos-duration="1200"
+                    data-aos-delay="200" className="text-center text-3xl font-medium text-blue-950 font-playfair">
                     Welcome, {user?.displayName}!
                 </h1>
                 <div className="card card-compact bg-white rounded-md w-[80%] md:w-[70%] lg:w-[40%] max-w-3xl shadow-md relative">
@@ -68,7 +72,9 @@ const Dashboard = () => {
                                 {user?.email}
                             </p>
                         </div>
-                        <Link to="/updateProfile">
+                        <Link data-aos="zoom-in"
+                            data-aos-duration="1200"
+                            data-aos-delay="200" to="/updateProfile">
                             <button className="btn btn-sm lg:btn-md bg-gradient-to-r from-blue-950 to-blue-600 text-white font-medium hover:font-bold transition-all duration-300 rounded-md shadow-md border-none">
                                 Update Profile
                             </button>

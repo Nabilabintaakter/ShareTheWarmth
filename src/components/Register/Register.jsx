@@ -95,7 +95,9 @@ const Register = () => {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <div className="text-center mb-8">
+            <div data-aos="fade-down"
+                data-aos-duration="1200"
+                data-aos-delay="200" className="text-center mb-8">
                 <h1 className="text-4xl lg:text-5xl font-extrabold mb-2">Create Your Account!</h1>
             </div>
             <div className="bg-white/30 backdrop-blur-lg shadow-2xl rounded-lg w-[90%] md:w-[60%] lg:w-[40%] px-6 py-8 max-w-xl">
@@ -148,6 +150,9 @@ const Register = () => {
                     {error && <p className='text-red-500 font-medium text-lg'>{error}</p>}
                     <div className="form-control mt-4">
                         <button
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                        data-aos-delay="200"
                             type="submit"
                             className="w-full bg-blue-600 text-white py-3 rounded-md text-lg border-[1px] border-blue-600 font-medium hover:bg-white hover:text-blue-600 hover:border-[1px] hover:border-blue-600 duration-300 transition-all hover:font-bold"
                         >
@@ -155,11 +160,14 @@ const Register = () => {
                         </button>
                     </div>
                 </form>
-                <div className="my-6 border-t border-gray-300"></div>
+                <div className="divider">Or</div>
                 <div className="form-control">
                     <button
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-delay="200"
                         onClick={googleLoginHandler}
-                        className="flex items-center justify-center gap-3 bg-red-500 text-white py-3 rounded-md text-lg font-medium border-[1px] border-red-500 hover:bg-white hover:border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-300"
+                        className="flex items-center justify-center gap-3 bg-red-500 text-white py-3 rounded-md text-lg font-medium border-[1px] border-red-500 hover:bg-white hover:border hover:border-red-500 hover:text-red-500 hover:font-bold transition-all duration-700"
                     >
                         <FcGoogle className="text-2xl" />
                         Login with Google
