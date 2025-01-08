@@ -23,6 +23,15 @@ The primary purpose of this website is to:
 - **Dashboard**: Users can view and manage their donation history and profile.
 - **Animations**: Smooth and visually appealing animations enhance user experience.
 
+## 🖼️ Screenshots
+
+### Home Page:
+<img src="https://i.ibb.co.com/chQgMMj/hopenest-1.jpg" alt="Home Page Screenshot" width="100%" />
+
+### My Campaigns Page:
+<img src="https://i.ibb.co.com/8DkCQ6L/hopenest-2.jpg" alt="Campaigns Page Screenshot" width="100%" />
+
+
 ## 🛠️Technologies Used
 
 ### Frontend:
