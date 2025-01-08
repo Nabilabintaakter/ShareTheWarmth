@@ -28,7 +28,7 @@ The primary purpose of this website is to:
 ### Home Page:
 <img src="https://i.ibb.co.com/NVP8SvY/share.jpg" alt="Home Page Screenshot" width="100%" />
 
-### My Campaigns Page:
+### Donation Campaigns Page:
 <img src="https://i.ibb.co.com/M9TZ3jn/share-2.jpg" alt="Campaigns Page Screenshot" width="100%" />
 
 
