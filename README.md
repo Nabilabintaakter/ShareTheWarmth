@@ -26,10 +26,10 @@ The primary purpose of this website is to:
 ## 🖼️ Screenshots
 
 ### Home Page:
-<img src="https://i.ibb.co.com/chQgMMj/hopenest-1.jpg" alt="Home Page Screenshot" width="100%" />
+<img src="https://i.ibb.co.com/NVP8SvY/share.jpg" alt="Home Page Screenshot" width="100%" />
 
 ### My Campaigns Page:
-<img src="https://i.ibb.co.com/8DkCQ6L/hopenest-2.jpg" alt="Campaigns Page Screenshot" width="100%" />
+<img src="https://i.ibb.co.com/M9TZ3jn/share-2.jpg" alt="Campaigns Page Screenshot" width="100%" />
 
 
 ## 🛠️Technologies Used
