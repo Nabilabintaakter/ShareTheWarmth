@@ -23,19 +23,40 @@ The primary purpose of this website is to:
 - **Dashboard**: Users can view and manage their donation history and profile.
 - **Animations**: Smooth and visually appealing animations enhance user experience.
 
-## Technologies Used 🛠️
+## 🛠️Technologies Used
 
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Firebase (Authentication)
-- **CSS Animations**: AOS (Animate On Scroll)
-- **Routing**: React Router
+### Frontend:
+- **React**: JavaScript library for building the user interface.
+- **Tailwind CSS**: Utility-first CSS framework for fast UI development.
+- **DaisyUI**: Tailwind CSS component library for ready-made UI components.
+- **React Router**: For routing and navigation.
+- **React Toastify**: For showing toast notifications.
+- **Swiper**: For implementing a carousel slider for donation campaigns.
+- **AOS**: For animations on scroll.
 
-## npm Packages Used 📦  
-- **React Router**: For navigation between pages.  
-- **AOS**: For scroll-based animations.  
-- **React Toastify**: For dynamic toast notifications.  
-- **Firebase**: For authentication and backend integration.  
-- **React Loader Spinner**: For displaying loading indicators during data fetching.  
-- **React Icons**: For adding various icons to enhance the UI.  
+### Backend:
+- **Firebase Authentication**: For user authentication and management.
 
+### Development Tools:
+- **Vite**: Build tool for fast development.
+- **ESLint**: For JavaScript linting and ensuring code quality.
+- **Prettier**: For consistent code formatting.
 
+---
+
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Nabilabintaakter/B10A9-ShareTheWarmth.git  
+1. Navigate to the project directory:
+   ```bash
+   cd B10A9-ShareTheWarmth 
+1. Install dependencies:
+   ```bash
+   npm install 
+1. Run the development server:
+   ```bash
+   npm run dev  
